@@ -1,0 +1,43 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: traefik-external
+  namespace: kube-system
+  annotations: 
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: semver:~2.2.0
+spec:
+  releaseName: traefik-external
+  helmVersion: v3
+  chart:
+    repository: https://containous.github.io/traefik-helm-chart
+    name: traefik
+    version: 9.1.1
+  values:
+    ingressRoute:
+      dashboard:
+        enabled: false
+    providers:
+      kubernetesCRD:
+        enabled: false
+      kubernetesIngress:
+        enabled: true
+        publishedService:
+          enabled: false
+    additionalArguments:
+      - "--providers.kubernetesingress.ingressclass=traefik-external"
+      - "--api.dashboard=true"
+      - "--api.insecure=true"
+    logs:
+      general:
+        format: json
+        level: ERROR
+    service:
+      enabled: true
+      type: LoadBalancer
+      spec:
+        loadBalancerIP: 10.68.69.3
+    ports:
+      traefik:
+        expose: true

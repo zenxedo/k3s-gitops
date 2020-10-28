@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jackett
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 9117
+    targetPort: 9117
+  selector:
+    app: jackett
+---   
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jackett
+  namespace: default
+  labels:
+    app: jackett
+spec:
+  selector:
+    matchLabels:
+      app: jackett      
+  template:
+    metadata:
+      labels:
+        app: jackett        
+    spec:
+      containers:
+      - name: jackett
+        image: linuxserver/jackett
+        ports:
+        - containerPort: 9117

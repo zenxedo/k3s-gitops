@@ -2,6 +2,12 @@
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
+installHelm() {
+  message "installing helm"
+  # install helm
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+}
+
 need() {
     which "$1" &>/dev/null || die "Binary '$1' is missing but required"
 }

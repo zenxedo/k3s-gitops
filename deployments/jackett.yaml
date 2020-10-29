@@ -36,3 +36,9 @@ spec:
     service:
       type: LoadBalancer
       port: 9117
+    resources:
+      requests:
+        memory: 350Mi
+        cpu: 25m
+      limits:
+        memory: 1500Mi

@@ -30,6 +30,12 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: nfs-data-pvc    
+        existingClaim: nfs-data-pvc
+    resources:
+      requests:
+        memory: 350Mi
+        cpu: 25m
+      limits:
+        memory: 1500Mi        
 
       

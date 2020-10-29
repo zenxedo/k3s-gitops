@@ -13,8 +13,7 @@ spec:
   helmVersion: v3
   chart:
     repository: https://helm.traefik.io/traefik
-    name: traefik
-    version: 2.3.1
+    name: traefik    
   values:
     ingressRoute:
       dashboard:

@@ -29,6 +29,7 @@ installFlux() {
     FLUX_READY="$?"
     sleep 5
   done
+}
 
 message "all done!"
 kubectl get nodes -o=wide

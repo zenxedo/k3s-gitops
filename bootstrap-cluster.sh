@@ -15,6 +15,11 @@ message() {
   echo "######################################################################"
 }
 
+installKs3() {
+  message "installing ks3"
+  curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik
+}
+
 installFlux() {
   message "installing flux"
   # install flux

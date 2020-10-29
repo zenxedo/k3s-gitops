@@ -15,5 +15,3 @@ memcached:
 syncGarbageCollection:
   enabled: true
   dry: false
-dashboards:
-  enabled: true

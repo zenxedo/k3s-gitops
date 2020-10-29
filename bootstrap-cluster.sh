@@ -1,5 +1,4 @@
 #!/bin/bash
 
-message() {
-  echo Hey
-}
+echo Hey
+

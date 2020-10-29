@@ -23,7 +23,14 @@ spec:
     timezone: "America/New_York"
     puid: 1000
     pgid: 1000
-    service:
+    persistence:
+      config:
+        enabled: true
+        existingClaim: nfs-data-pvc
+        size: 3Gi
+      media:
+        enabled: true
+        existingClaim: nfs-data-pvc
       type: LoadBalancer
       port: 7878  
     resources:

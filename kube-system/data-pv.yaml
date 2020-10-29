@@ -18,7 +18,7 @@ spec:
     name: nfs-data-pv  
   nfs:
     server: 10.68.69.2
-    path: "/mnt/myVol/kube"
+    path: "/mnt/myVol/kubeNFS"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

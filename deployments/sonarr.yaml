@@ -25,11 +25,7 @@ spec:
     pgid: 1000
     service:
       type: LoadBalancer
-      port: 8989
-    persistence:
-      config:
-        enabled: true
-        existingClaim: nfs-data-pvc
+      port: 8989    
     resources:
       requests:
         memory: 350Mi

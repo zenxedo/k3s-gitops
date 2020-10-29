@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
+  namespace: kube-system
   name: nfs-data-pv
 spec:
   storageClassName: data
@@ -9,6 +10,12 @@ spec:
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
+  mountOptions:
+    - hard
+    - nfsvers=3
+  claimRef:
+    namespace: kube-system
+    name: nfs-data-pv  
   nfs:
     server: 10.68.69.2
     path: "/mnt/myVol/kube"

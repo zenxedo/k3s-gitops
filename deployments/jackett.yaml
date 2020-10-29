@@ -9,18 +9,6 @@ spec:
     targetPort: 9117
   selector:
     app: jackett
----   
-apiVersion: v1
-kind: Service
-metadata:
-  name: tautulli
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 8181
-    targetPort: 8181
-  selector:
-    app: tautulli
 --- 
 apiVersion: apps/v1
 kind: Deployment

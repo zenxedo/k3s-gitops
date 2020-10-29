@@ -2,6 +2,11 @@
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
+installKs3() {
+  message "installing ks3"
+  curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik
+}
+
 need() {
     which "$1" &>/dev/null || die "Binary '$1' is missing but required"
 }
@@ -13,11 +18,6 @@ message() {
   echo -e "\n######################################################################"
   echo "# $1"
   echo "######################################################################"
-}
-
-installKs3() {
-  message "installing ks3"
-  curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik
 }
 
 installFlux() {

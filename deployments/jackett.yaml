@@ -1,33 +1,38 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: jackett
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 9117
-    targetPort: 9117
-  selector:
-    app: jackett
---- 
-apiVersion: apps/v1
-kind: Deployment
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
 metadata:
   name: jackett
   namespace: default
-  labels:
-    app: jackett
+  annotations:
+    fluxcd.io/ignore: "false"
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.chart-image: 'regexp:^(version-v0\.16\.[0-9]+)$'
 spec:
-  selector:
-    matchLabels:
-      app: jackett      
-  template:
-    metadata:
-      labels:
-        app: jackett        
-    spec:
-      containers:
-      - name: jackett
-        image: linuxserver/jackett
-        ports:
-        - containerPort: 9117
+  releaseName: jackett
+  helmVersion: v3
+  rollback:
+    enable: false
+  chart:
+    repository: https://k8s-at-home.com/charts/
+    name: jackett
+    version: 3.0.1
+  values:
+    image:
+      repository: linuxserver/jackett
+      tag: version-v0.16.1922
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: "internal"
+      hosts:
+      - "jackett.devbu.io"
+      tls:
+      - hosts:
+        - "jackett.devbu.io"
+    timezone: "America/New_York"
+    puid: 1000
+    pgid: 1000
+    service:
+      type: LoadBalancer
+      port: 9117

@@ -1,0 +1,38 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: sonarr
+  namespace: default
+  annotations:
+    fluxcd.io/ignore: "false"
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: sonarr
+  helmVersion: v3
+  rollback:
+    enable: false
+  chart:
+    repository: https://k8s-at-home.com/charts/
+    name: sonarr
+    version: 5.0.1
+  values:
+    image:
+      repository: linuxserver/sonarr
+      tag: version-3.0.4.991
+    timezone: "America/New_York"
+    puid: 1000
+    pgid: 1000
+    service:
+      type: LoadBalancer
+      port: 8989
+    persistence:
+      config:
+        enabled: true
+        existingClaim: nfs-data-pvc
+    resources:
+      requests:
+        memory: 350Mi
+        cpu: 25m
+      limits:
+        memory: 1500Mi

@@ -13,4 +13,4 @@ spec:
     version: 1.2.0
   valuesFrom:
   - externalSourceRef:
-      url: https://github.com/zenxedo/k3s-gitops/blob/master/flux/flux-helm-operator-values.yaml
+      url: https://raw.githubusercontent.com/zenxedo/k3s-gitops/blob/master/flux/flux-helm-operator-values.yaml

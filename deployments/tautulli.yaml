@@ -34,3 +34,7 @@ ingress:
     - host: t.kube.com
       paths:
         - /
+persistence:
+      config:
+        enabled: true
+        existingClaim: nfs-data-pvc        

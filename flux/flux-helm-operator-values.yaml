@@ -1,8 +1,4 @@
-
-# image:
-#   repository: docker.io/fluxcd/helm-operator
-#   tag: 1.2.0
-createCRD: true
+---
 git:
   ssh:
     secretName: flux-git-deploy

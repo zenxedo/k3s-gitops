@@ -1,17 +1,11 @@
+---
 helmOperator:
   create: false
 git:
   url: "git@github.com:zenxedo/k3s-gitops"
-image:
-  repository: docker.io/fluxcd/flux
-  tag: 1.21.0
-registry:
-  rps: 50
-  burst: 50
+  secretName: flux-git-deploy
 memcached:
-  tolerations:
-  - key: "arm"
-    operator: "Exists"
+  enabled: true
 syncGarbageCollection:
   enabled: true
   dry: false

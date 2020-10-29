@@ -60,3 +60,5 @@ A lot of inspiration for this repo came from the following people:
 
 - [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)
 - [onedr0p/k3s-gitops](https://github.com/onedr0p/k3s-gitops)
+https://github.com/bjw-s/k8s-gitops
+https://github.com/nickysemenza/k3s

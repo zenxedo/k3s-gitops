@@ -21,11 +21,10 @@ spec:
     image:
       repository: linuxserver/tautulli
       tag: v2.5.6-ls14
-timezone: "America/New_York"
-puid: 1000
-pgid: 1000
-
-service:
+    timezone: "America/New_York"
+    puid: 1000
+    pgid: 1000
+  service:
   type: LoadBalancer
   port: 8181
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
@@ -46,7 +45,9 @@ service:
   ## Set the externalTrafficPolicy in the Service to either Cluster or Local
   # externalTrafficPolicy: Cluster
 
-persistence:
-      config:
-        enabled: true
-        existingClaim: nfs-data-pvc        
+  persistence:
+    config:
+      enabled: true
+      existingClaim: nfs-data-pvc    
+
+      

@@ -5,8 +5,8 @@ metadata:
   name: flux
   namespace: flux
   annotations:
+    fluxcd.io/ignore: "false"
     fluxcd.io/automated: "false"
-    filter.fluxcd.io/chart-image: semver:~1.14
 spec:
   releaseName: flux
   helmVersion: v3

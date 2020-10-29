@@ -1,0 +1,28 @@
+  
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: longhorn
+  namespace: longhorn-system
+  annotations:
+    fluxcd.io/ignore: "false"
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: longhorn
+  helmVersion: v3
+  chart:
+    repository: https://charts.longhorn.io
+    name: longhorn
+    version: 1.0.2
+  values:
+    persistence:
+      defaultClassReplicaCount: 1
+    defaultSettings:
+      defaultReplicaCount: 1
+      createDefaultDiskLabeledNodes: true
+      #backupTarget: s3://longhorn@192.168.1.39/backups
+      #backupTargetCredentialSecret: longhorn-backup-secret
+    service:
+      type: LoadBalancer
+      port: 9500

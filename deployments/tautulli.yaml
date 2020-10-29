@@ -24,16 +24,6 @@ spec:
 timezone: "America/New_York"
 puid: 1000
 pgid: 1000
-ingress:
-  enabled: true
-  annotations: 
-    kubernetes.io/ingress.class: "traefik-external"
-    #traefik.ingress.kubernetes.io/router.tls: "true"
-    #cert-manager.io/cluster-issuer: "letsencrypt-issuer"
-  hosts:
-    - host: t.kube.com
-      paths:
-        - /
 persistence:
       config:
         enabled: true

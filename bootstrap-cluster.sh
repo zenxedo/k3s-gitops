@@ -1,5 +1,2 @@
 #!/bin/bash
-
-message() {
-  echo Hey
-}
+echo "Hello World";

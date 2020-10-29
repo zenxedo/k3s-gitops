@@ -1,0 +1,19 @@
+helmOperator:
+  create: false
+git:
+  url: "git@github.com:zenxedo/k3s-gitops"
+image:
+  repository: docker.io/fluxcd/flux
+  tag: 1.21.0
+registry:
+  rps: 50
+  burst: 50
+memcached:
+  tolerations:
+  - key: "arm"
+    operator: "Exists"
+syncGarbageCollection:
+  enabled: true
+  dry: false
+dashboards:
+  enabled: true

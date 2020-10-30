@@ -24,13 +24,6 @@ metadata:
 spec:
   interval: 1m
   url: https://kubernetes.github.io/dashboard/ 
----
-apiVersion: source.helm.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: nfs-client-provisioner
-  namespace: flux-system
-spec:
-  interval: 1m
-  url: https://kubernetes-charts.storage.googleapis.com/
+
+
 

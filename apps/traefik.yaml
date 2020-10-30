@@ -1,0 +1,33 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: default
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: traefik
+      version: "9.4.x"
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+        namespace: flux-system
+      interval: 1m
+  values:
+    additionalArguments:
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`traefik.kube.com`)
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService    

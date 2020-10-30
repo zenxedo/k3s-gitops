@@ -27,7 +27,6 @@ spec:
       config:
         enabled: true
         existingClaim: nfs-data-pvc
-        size: 3Gi
       media:
         enabled: true
         existingClaim: nfs-data-pvc

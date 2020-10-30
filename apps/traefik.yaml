@@ -16,18 +16,3 @@ spec:
       interval: 1m
   values:
     additionalArguments:
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: dashboard
-  namespace: default
-spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`traefik.kube.com`)
-      kind: Rule
-      services:
-        - name: api@internal
-          kind: TraefikService    

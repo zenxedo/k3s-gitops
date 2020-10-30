@@ -16,7 +16,7 @@ spec:
   interval: 1m
   url: https://kubernetes.github.io/dashboard/ 
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: k8s-at-home

@@ -25,11 +25,12 @@ spec:
   interval: 1m
   url: https://kubernetes.github.io/dashboard/ 
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta1
+apiVersion: source.helm.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: k8s-at-home
+  name: nfs-client-provisioner
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://k8s-at-home.com/charts/ 
+  url: https://kubernetes-charts.storage.googleapis.com/
+

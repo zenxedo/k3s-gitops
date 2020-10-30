@@ -15,6 +15,15 @@ metadata:
 spec:
   interval: 1m
   url: https://kubernetes.github.io/dashboard/ 
+---
+apiVersion: source.helm.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: stable
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://k8s-at-home.com/charts/
 
 
 

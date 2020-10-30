@@ -21,7 +21,7 @@ spec:
       ingress:
         enabled: true
         annotations:
-          traefik.ingress.kubernetes.io/router.middlewares: system-cf-access-auth@kubernetescrd
+         # traefik.ingress.kubernetes.io/router.middlewares: system-cf-access-auth@kubernetescrd
         hosts:
           - host: jackett.kube.com
             paths: ["/"]

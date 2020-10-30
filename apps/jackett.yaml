@@ -18,6 +18,10 @@ spec:
     jackett:
       env:
         TZ: America/New_York
-      service:
-        type: LoadBalancer
-        port: 9117
+      ingress:
+        enabled: true
+        annotations:
+          traefik.ingress.kubernetes.io/router.middlewares: system-cf-access-auth@kubernetescrd
+        hosts:
+          - host: jackett.kube.com
+            paths: ["/"]

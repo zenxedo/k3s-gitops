@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traefik-auth-cloudflare
+  namespace: system
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: traefik-auth-cloudflare
+      app.kubernetes.io/instance: traefik-auth-cloudflare
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: traefik-auth-cloudflare
+        app.kubernetes.io/instance: traefik-auth-cloudflare
+    spec:
+      containers:
+        - args:
+            - --auth-domain
+            - https://smcbox.cloudflareaccess.com
+          image: akohlbecker/traefik-auth-cloudflare
+          name: traefik-auth-cloudflare
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 10m
+              memory: 50Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik-auth-cloudflare
+  namespace: system
+  labels:
+    app.kubernetes.io/name: traefik-auth-cloudflare
+    app.kubernetes.io/instance: traefik-auth-cloudflare
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: traefik-auth-cloudflare
+    app.kubernetes.io/instance: traefik-auth-cloudflare

@@ -20,8 +20,8 @@ spec:
       # - "--tracing.jaeger.samplingServerURL=http://monitoring-jaeger-agent.monitoring.svc.cluster.local:5778/sampling"
       # - "--tracing.jaeger.localAgentHostPort=monitoring-jaeger-agent.monitoring.svc.cluster.local:6831"
       # - "--tracing.jaeger.collector.endpoint=http://monitoring-jaeger-collector.monitoring.svc.cluster.local:14268/api/traces?format=jaeger.thrift"
-      - "--accesslog=true"
-      - "--metrics.prometheus=true"
+      #- "--accesslog=true"
+      #- "--metrics.prometheus=true"
       - "--serversTransport.insecureSkipVerify=true" # for k8s dash
       - "--entryPoints.web.forwardedHeaders.insecure"
       # - "--entrypoints.fooudp.address=:8191/udp"

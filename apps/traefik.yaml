@@ -25,3 +25,18 @@ spec:
       - "--serversTransport.insecureSkipVerify=true" # for k8s dash
       - "--entryPoints.web.forwardedHeaders.insecure"
       # - "--entrypoints.fooudp.address=:8191/udp"
+---   
+# dashboard.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`traefik.kube.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService

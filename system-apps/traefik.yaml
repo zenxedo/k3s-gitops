@@ -22,6 +22,7 @@ spec:
       # - "--tracing.jaeger.collector.endpoint=http://monitoring-jaeger-collector.monitoring.svc.cluster.local:14268/api/traces?format=jaeger.thrift"
       #- "--accesslog=true"
       #- "--metrics.prometheus=true"
+      - "--api.dashboard=true"
       - "--serversTransport.insecureSkipVerify=true" # for k8s dash
       - "--entryPoints.web.forwardedHeaders.insecure"
       # - "--entrypoints.fooudp.address=:8191/udp"

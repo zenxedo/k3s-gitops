@@ -22,4 +22,7 @@ spec:
       createDefaultDiskLabeledNodes: true
       #backupTarget: s3://longhorn@192.168.1.39/backups
       #backupTargetCredentialSecret: longhorn-backup-secret
+    service:  
+      type: LoadBalancer
+      port: 9500  
     

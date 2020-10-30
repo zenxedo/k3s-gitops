@@ -21,4 +21,9 @@ spec:
       - --enable-insecure-login
     metricsScraper:
       enabled: true
-      
+    service:
+      type: LoadBalancer
+      ports:
+        -port: 443
+        protocol: TCP
+        targetPort: 8443  

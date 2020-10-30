@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: kubernetes-dashboard
-  namespace: default
+  namespace: system
 spec:
   interval: 5m
   chart:
@@ -12,19 +12,19 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kubernetes-dashboard
-        namespace: flux-system
+        namespace: flux
       interval: 1m
   values:
-    service.externalPort: 444
+    ingress:
+      enabled: true
+      annotations:
+        traefik.ingress.kubernetes.io/router.middlewares: system-cf-access-auth@kubernetescrd
+      hosts:
+        - dashboard.kube.com
+    # protocolHttp: true
     extraArgs:
       - --enable-skip-login
       - --disable-settings-authorizer
       - --enable-insecure-login
     metricsScraper:
       enabled: true
-    service:
-      type: LoadBalancer
-      ports:
-        protocol: TCP
-        port: 444        
-        targetPort: 8443  

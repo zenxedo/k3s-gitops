@@ -1,4 +1,3 @@
-  
 ---
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
@@ -17,9 +16,9 @@ spec:
     version: 1.0.2
   values:
     persistence:
-      defaultClassReplicaCount: 1
+      defaultClassReplicaCount: 3
     defaultSettings:
-      defaultReplicaCount: 1
+      defaultReplicaCount: 3
       createDefaultDiskLabeledNodes: true
       #backupTarget: s3://longhorn@192.168.1.39/backups
       #backupTargetCredentialSecret: longhorn-backup-secret

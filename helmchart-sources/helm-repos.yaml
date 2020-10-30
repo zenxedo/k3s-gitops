@@ -10,15 +10,6 @@ spec:
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: traefik
-  namespace: flux-system
-spec:
-  interval: 1m
-  url: https://helm.traefik.io/traefik
----
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: HelmRepository
-metadata:
   name: kubernetes-dashboard
   namespace: flux-system
 spec:

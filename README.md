@@ -15,7 +15,7 @@
 
 # :book:&nbsp; Overview
 
-Welcome to my home Kubernetes cluster. This repo _is_ my Kubernetes cluster in a declarative state. [Flux](https://github.com/fluxcd/flux) and [Helm Operator](https://github.com/fluxcd/helm-operator) watch my [deployments](./deployments/) folder and makes the changes to my cluster based on the yaml manifests.
+Welcome to my home Kubernetes cluster. This repo _is_ my Kubernetes cluster in a declarative state. [Flux Toolkit V2](https://toolkit.fluxcd.io/) and [Helm Operator](https://github.com/fluxcd/helm-operator) watch my [root](./) folder and makes the changes to my cluster based on the yaml manifests.
 
 ---
 

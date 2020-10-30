@@ -22,3 +22,6 @@ spec:
       - --enable-insecure-login
     metricsScraper:
       enabled: true
+    service:  
+      type: LoadBalancer
+      port: 8001  

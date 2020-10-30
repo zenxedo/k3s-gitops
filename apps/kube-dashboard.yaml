@@ -15,6 +15,7 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
+    service.externalPort: 444
     extraArgs:
       - --enable-skip-login
       - --disable-settings-authorizer
@@ -24,6 +25,6 @@ spec:
     service:
       type: LoadBalancer
       ports:
-        -port: 444
         protocol: TCP
+        port: 444        
         targetPort: 8443  

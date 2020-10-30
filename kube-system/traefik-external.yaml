@@ -20,7 +20,7 @@ spec:
       - "--providers.kubernetesingress.ingressclass=traefik-external"
       - "--api.dashboard=true"
       - "--api.insecure=true"
-           - "--log.level=DEBUG"
+      #     - "--log.level=DEBUG"
       # - "--tracing.jaeger.samplingServerURL=http://monitoring-jaeger-agent.monitoring.svc.cluster.local:5778/sampling"
       # - "--tracing.jaeger.localAgentHostPort=monitoring-jaeger-agent.monitoring.svc.cluster.local:6831"
       # - "--tracing.jaeger.collector.endpoint=http://monitoring-jaeger-collector.monitoring.svc.cluster.local:14268/api/traces?format=jaeger.thrift"

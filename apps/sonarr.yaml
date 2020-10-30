@@ -15,18 +15,17 @@ spec:
         namespace: flux
       interval: 1m
   values:
-    image:
-      repository: linuxserver/sonarr
-      tag: version-3.0.4.991
-    timezone: "America/New_York"
-    puid: 1000
-    pgid: 1000
-    service:
-      type: LoadBalancer
-      port: 8989    
-    resources:
-      requests:
-        memory: 350Mi
-        cpu: 25m
-      limits:
-        memory: 1500Mi
+    sonarr:
+      env:
+        TZ: America/New_York
+        puid: 1000
+        pgid: 1000
+      service:
+        type: LoadBalancer
+        port: 8989    
+      resources:
+        requests:
+          memory: 350Mi
+          cpu: 25m
+        limits:
+          memory: 1500Mi  

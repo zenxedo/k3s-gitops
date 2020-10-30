@@ -13,7 +13,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kubernetes-dashboard
-        namespace: flux
+        namespace: flux-system
       interval: 1m
   values:
     extraArgs:

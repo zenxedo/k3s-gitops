@@ -16,7 +16,7 @@ spec:
   interval: 1m
   url: https://kubernetes.github.io/dashboard/ 
 ---
-apiVersion: source.helm.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: stable

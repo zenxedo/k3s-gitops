@@ -53,21 +53,4 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
----
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: HelmRepository
-metadata:
-  name: traefik
-  namespace: default
-spec:
-  interval: 1m
-  url: https://helm.traefik.io/traefik
----
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: HelmRepository
-metadata:
-  name: kubernetes-dashboard
-  namespace: default
-spec:
-  interval: 1m
-  url: https://kubernetes.github.io/dashboard/  
+

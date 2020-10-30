@@ -24,6 +24,6 @@ spec:
     service:
       type: LoadBalancer
       ports:
-        -port: 443
+        -port: 444
         protocol: TCP
         targetPort: 8443  

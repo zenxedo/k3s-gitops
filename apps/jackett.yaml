@@ -20,9 +20,9 @@ spec:
         TZ: America/New_York
         puid: 1000
         pgid: 1000
-        ingress:
-          enabled: true
-          annotations:
-            kubernetes.io/ingress.class: "traefik-external"         
-          hosts:
-            - "jackett.kube.com"
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: "traefik-external"         
+        hosts:
+          -host: "jackett.kube.com"

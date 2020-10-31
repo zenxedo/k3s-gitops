@@ -58,6 +58,7 @@ spec:
   - match: Host(`whoami.kube.com`) || Host(`whoami`)
     kind: Rule
     services:
-    - name: jackett
-      port: 9117
+    - name: whoami
+      port: 80
+      
     

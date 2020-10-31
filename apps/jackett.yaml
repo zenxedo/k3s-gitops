@@ -19,6 +19,11 @@ spec:
       enabled: true     
       hosts:
         - jack.kube.com
+      persistence:
+        enabled: false
+
+        
+
 
       
    

@@ -40,6 +40,12 @@ spec:
   selector:
     app: traefiklabs
     task: whoami
+  ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: traefik-external    
+  hosts:
+    - who.kube.com
     
 ---
 #trying ingress
@@ -60,5 +66,5 @@ spec:
     services:
     - name: whoami
       port: 80
-      
+
     

@@ -23,6 +23,6 @@ spec:
         ingress:
           enabled: true
           annotations:
-            kubernetes.io/ingress.class: traefik-external         
+            kubernetes.io/ingress.class: "traefik-external"         
           hosts:
             - "jackett.kube.com"

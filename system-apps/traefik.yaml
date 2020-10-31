@@ -23,9 +23,11 @@ spec:
       #- "--accesslog=true"
       #- "--metrics.prometheus=true"
       - "--api.dashboard=true"
+      - "--api.insecure=true"
       - "--serversTransport.insecureSkipVerify=true" # for k8s dash
       - "--entryPoints.web.forwardedHeaders.insecure"
       # - "--entrypoints.fooudp.address=:8191/udp"
+      - "--providers.kubernetesingress.ingressclass=traefik-external"
 ---   
 # dashboard.yaml
 apiVersion: traefik.containo.us/v1alpha1
@@ -41,3 +43,4 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
+

@@ -18,3 +18,10 @@ spec:
     jackett:
       env:
         TZ: America/New_York
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: traefik-external
+          traefik.ingress.kubernetes.io/router.tls: "true"
+        hosts:
+          - jackett.kube.com  

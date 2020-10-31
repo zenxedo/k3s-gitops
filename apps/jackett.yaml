@@ -16,12 +16,9 @@ spec:
       interval: 1m
   values:
     ingress:
-      enabled: true
+      enabled: true     
       hosts:
-        - host: jack.kube.com
-          paths:
-            - path: /
-              pathType: Prefix 
+        - jack.kube.com
     TZ: America/New_York
     puid: 1000
     pgid: 1000

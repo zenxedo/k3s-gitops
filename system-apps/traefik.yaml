@@ -24,6 +24,7 @@ spec:
       - "--entryPoints.web.forwardedHeaders.insecure"
       # - "--entrypoints.fooudp.address=:8191/udp"
       - "--providers.kubernetesingress.ingressclass=traefik-external"
+      - "--providers.kubernetescrd"
 
     service:
       spec:

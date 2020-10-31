@@ -18,5 +18,11 @@ spec:
     jackett:
       env:
         TZ: America/New_York
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: "traefik-external"    
+        hosts:
+          - "who.kube.com"  
       
    

@@ -16,11 +16,11 @@ spec:
       interval: 1m
   values:
     ingress:
-        enabled: true
-        annotations:
-          kubernetes.io/ingress.class: "traefik-external"    
-        hosts:
-          - "who.kube.com"  
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: "traefik-external"    
+      hosts:
+        - "who.kube.com"  
     jackett:
       env:
         TZ: America/New_York

@@ -25,4 +25,4 @@ spec:
           annotations:
             kubernetes.io/ingress.class: traefik-external         
           hosts:
-            - jackett.kube.co  
+            - jackett.kube.com

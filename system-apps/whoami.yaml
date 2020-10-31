@@ -41,24 +41,5 @@ spec:
     app: traefiklabs
     task: whoami 
 
----
-#trying ingress
-
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: myingressroute
-  namespace: system
-
-spec:
-  entryPoints:
-    - web
-
-  routes:
-  - match: Host(`whoami.kube.com`) || Host(`whoami`)
-    kind: Rule
-    services:
-    - name: whoami
-      port: 80
 
     

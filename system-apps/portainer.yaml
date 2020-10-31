@@ -45,26 +45,6 @@ spec:
       targetPort: 8000
       nodePort: 30776
 ---
----
-#trying ingress
-
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: myingressroute-portainer
-  namespace: system
-
-spec:
-  entryPoints:
-    - web
-
-  routes:
-  - match: Host(`portainer.kube.com`)
-    kind: Rule
-    services:
-    - name: portainer
-      port: 9000
----      
 apiVersion: apps/v1
 kind: Deployment
 metadata:

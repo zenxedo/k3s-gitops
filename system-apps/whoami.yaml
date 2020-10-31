@@ -59,4 +59,4 @@ spec:
     kind: Rule
     services:
     - name: whoami
-      port: 80    
+      port: 9117   

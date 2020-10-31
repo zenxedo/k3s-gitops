@@ -1,0 +1,34 @@
+---   
+# dashboard.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard
+  namespace: system
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`traefik.kube.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService
+---
+#trying ingress
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: myingressroute
+  namespace: system
+
+spec:
+  entryPoints:
+    - web
+
+  routes:
+  - match: Host(`whoami.kube.com`) || Host(`whoami`)
+    kind: Rule
+    services:
+    - name: whoami
+      port: 80

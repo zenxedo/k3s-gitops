@@ -21,7 +21,6 @@ spec:
       ingress:
         enabled: true
         annotations:
-          kubernetes.io/ingress.class: traefik-external
-          traefik.ingress.kubernetes.io/router.tls: "true"
+          kubernetes.io/ingress.class: traefik-external         
         hosts:
           - jackett.kube.com  

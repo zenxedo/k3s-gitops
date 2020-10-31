@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: whoami-helm
+  namespace: system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: whoami
+      version: "0.3.x"
+      sourceRef:
+        kind: HelmRepository
+        name: halkeye
+        namespace: flux-system
+      interval: 1m
+  values:
+    ingress:
+      enabled: true     
+      hosts:
+        - whohelm.kube.com

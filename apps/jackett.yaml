@@ -17,8 +17,6 @@ spec:
   values:
     ingress:
       enabled: true
-      annotations:
-        kubernetes.io/ingress.class: "traefik-external"    
       hosts:
         - "who.kube.com"  
     TZ: America/New_York

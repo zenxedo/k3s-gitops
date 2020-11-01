@@ -27,7 +27,7 @@ spec:
       persistence:
         config:
           enabled: true
-          storageClass: local
+          storageClass: local-storage
           accessMode: ReadWriteOnce
           size: 1Gi
 

@@ -22,9 +22,11 @@ spec:
         type: deployment
         config:
           enabled: true
-          storageClass: media
-          accessMode: ReadWriteOnce
-          size: 1Gi    
+          existingClaim: nfs-media-pvc
+          #enabled: true
+          #storageClass: media
+          #accessMode: ReadWriteOnce
+          #size: 1Gi    
     
        
 

@@ -28,7 +28,7 @@ spec:
         type: deployment
         config:
           enabled: true
-          storageClass: nfs-pv
+          storageClass: mnt-nfs-media-nas
           accessMode: ReadWriteOnce
           size: 1Gi
       resources:

@@ -5,7 +5,7 @@ metadata:
   name: nfs-media-pv
 spec:
   capacity:
-    storage: 1mi
+    storage: 1Gb
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
@@ -32,6 +32,6 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 1mi
+      storage: 1Gb
   storageClassName: media
   volumeName: nfs-media-pv

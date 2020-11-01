@@ -19,4 +19,5 @@ spec:
       enabled: true     
       hosts:
         - plex.kube.com
-    TZ: America/New_York   
+    env:
+      TZ: America/New_York   

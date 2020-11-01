@@ -22,7 +22,7 @@ spec:
         type: deployment
         config:
           enabled: true
-          storageClass: mnt-nfs-media-nas
+          storageClass: media
           accessMode: ReadWriteOnce
           size: 1Gi
        

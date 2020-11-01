@@ -27,5 +27,6 @@ spec:
       annotations:
         kubernetes.io/ingress.class: "internal"
       host: "longhorn.kube.com" 
-    annotations:
-      storageclass.kubernetes.io/is-default-class: false 
+    metadata:
+      annotations:
+        storageclass.kubernetes.io/is-default-class: false 

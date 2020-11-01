@@ -8,10 +8,10 @@ spec:
   chart:
     spec:
       chart: jackett
-      version: "4.0.x"
+      version: "0.1.x"
       sourceRef:
         kind: HelmRepository
-        name: k8s-at-home
+        name: halkeye
         namespace: flux-system
       interval: 1m
   values:
@@ -22,7 +22,7 @@ spec:
       persistence:
         enabled: false
 
-        
+
 
 
       

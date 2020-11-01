@@ -14,25 +14,24 @@ spec:
         name: k8s-at-home
         namespace: flux-system
       interval: 1m
-  values:
-    jackett:
-      ingress:
-        enabled: true
+  values:   
+    ingress:
+      enabled: true
         #annotations:
        # kubernetes.io/ingress.class: "external"
-        hosts:
+      hosts:
         - "jackett.kube.com"
-        tls:
-        - hosts:
-          - "jackett.kube.com"
-      timezone: "America/New_York"
-      puid: 1000
-      pgid: 1000
-      persistence:
-        type: deployment
-        config:
-          enabled: true
-          existingClaim: nfs-media-pvc
+      tls:
+      - hosts:
+      - "jackett.kube.com"
+    timezone: "America/New_York"
+    puid: 1000
+    pgid: 1000
+    persistence:
+      type: deployment
+      config:
+        enabled: true
+        existingClaim: nfs-media-pvc
           #enabled: true
           #storageClass: media
           #accessMode: ReadWriteOnce

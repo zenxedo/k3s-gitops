@@ -24,4 +24,8 @@ spec:
     # kubernetes.io/tls-acme: "true"
       hosts:
         - host: radarr.kube.com
-         
+    persistence:
+      type: deployment
+      config:
+        enabled: false
+       #existingClaim: nfs-media-pvc     

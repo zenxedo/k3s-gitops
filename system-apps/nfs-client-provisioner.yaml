@@ -3,11 +3,10 @@ kind: HelmRelease
 metadata:
   name: nfs-client-provisioner
   namespace: system
-  annotations:
-    fluxcd.io/ignore: "false"
-    fluxcd.io/automated: "false"
-spec:
-  releaseName: nfs-client-provisioner
+  #annotations:
+  #  fluxcd.io/ignore: "false"
+ #k   fluxcd.io/automated: "false"
+spec:  
   interval: 5m
   chart:
     spec:
@@ -18,10 +17,7 @@ spec:
         name: stable-deprecated
         namespace: flux-system
       interval: 1m
-  values:
-    image:
-      repository: quay.io/external_storage/nfs-client-provisioner
-      tag: v3.1.0-k8s1.11
+  values:    
     nfs:
       path: /mnt/myVol/kubeNFS/data
       server: 10.68.69.2     

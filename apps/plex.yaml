@@ -20,4 +20,11 @@ spec:
       hosts:
         - plex.kube.com
     env:
-      TZ: America/New_York   
+      TZ: America/New_York
+    persistence:
+      transcode:
+        enabled: false
+        size: 1gb
+      data:  
+        enabled: false
+        size: 1gb

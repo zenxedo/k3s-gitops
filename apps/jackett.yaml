@@ -27,7 +27,7 @@ spec:
       persistence:
         config:
           enabled: true
-          storageClass: local-storage
+          storageClass: nfs-pvc
           accessMode: ReadWriteOnce
           size: 1Gi
 

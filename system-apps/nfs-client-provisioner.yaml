@@ -11,7 +11,7 @@ spec:
   chart:
     spec:
       chart: nfs-client-provisioner
-      version: "1.2.8"
+      version: "1.2.x"
       sourceRef:
         kind: HelmRepository
         name: Stable

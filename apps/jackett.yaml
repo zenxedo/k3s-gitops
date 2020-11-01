@@ -25,11 +25,17 @@ spec:
         hosts:
         - jack.kube.com
       persistence:
+        type: deployment
         config:
           enabled: true
           storageClass: nfs-pvc
           accessMode: ReadWriteOnce
           size: 1Gi
+      resources:
+        requests:
+          memory: "256M"
+        limits:
+          memory: "512M"    
 
 
 

@@ -126,6 +126,7 @@ kubectl get nodes
 kubectl get service
 kubectl get pv
 kubectl get deployments
+kubectl get storageclass
 kubectl get pods -n foo
 kubectl get pods --all-namespaces
 kubectl get pods,deployments,services,helmreleases,pv --namespace=media

@@ -25,7 +25,11 @@ spec:
       hosts:
         - host: radarr.kube.com
     persistence:
-      type: deployment
       config:
-        enabled: false
-       #existingClaim: nfs-media-pvc     
+        enabled: true
+        storageClass: "longhorn"
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      media:
+        enabled: false  
+        

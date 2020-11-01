@@ -133,7 +133,8 @@ kubectl patch pv nfs-data-pv -p '{"spec":{"persistentVolumeReclaimPolicy":"Delet
 
 
 kubectl delete pvc --all 
-kubectl delete --all pods,deployments,services,helmreleases --namespace=default
+kubectl delete --all pods,deployments,services,helmreleases,pv --namespace=media
+
 kubectl delete --all deployments --namespace=default
 kubectl delete services hello-world
 kubectl delete deployment hello-world

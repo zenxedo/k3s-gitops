@@ -22,6 +22,4 @@ spec:
     sonarr:
       env:
         TZ: America/New_York
-      service:
-        type: LoadBalancer
-        port: 8989
+     

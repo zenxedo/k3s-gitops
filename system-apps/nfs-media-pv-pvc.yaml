@@ -5,7 +5,7 @@ metadata:
   name: mnt-nfs-media-nas
 spec:
   capacity:
-    storage: 5Gi
+    storage: 1Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany

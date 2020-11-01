@@ -17,7 +17,7 @@ spec:
   values:
     jackett:
       env:
-        TZ: "America/Los_Angeles"
+        TZ: "America/New_York"
       ingress:
         enabled: true
         annotations:

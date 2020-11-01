@@ -42,6 +42,15 @@ metadata:
 spec:
   interval: 1m
   url: https://halkeye.github.io/helm-charts/
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: longhorn
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://charts.longhorn.io
 
 
 

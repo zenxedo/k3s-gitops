@@ -24,6 +24,7 @@ spec:
          # traefik.ingress.kubernetes.io/router.middlewares: system-cf-access-auth@kubernetescrd
         hosts:
           - host: jack.kube.com
+            paths: ["/"]
       persistence:
         type: deployment
         config:

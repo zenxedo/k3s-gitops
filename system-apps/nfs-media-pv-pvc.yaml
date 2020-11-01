@@ -2,10 +2,10 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   namespace: media
-  name: mnt-nfs-media-nas
+  name: nfs-media-pv
 spec:
   capacity:
-    storage: 1Gi
+    storage: 1mi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
@@ -25,13 +25,13 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   namespace: media
-  name: nfs-media-nas
+  name: nfs-media-pvc
 spec:
   accessModes:
     - ReadWriteMany
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
+      storage: 1mi
   storageClassName: media
-  volumeName: mnt-nfs-media-nas
+  volumeName: nfs-media-pv

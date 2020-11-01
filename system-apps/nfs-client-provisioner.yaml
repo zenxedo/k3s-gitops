@@ -1,13 +1,13 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: nfs-client-provisioner-nas
+  name: nfs-client-provisioner
   namespace: system
   annotations:
     fluxcd.io/ignore: "false"
     fluxcd.io/automated: "false"
 spec:
-  releaseName: nfs-client-provisioner-nas
+  releaseName: nfs-client-provisioner
   interval: 5m
   chart:
     spec:
@@ -23,7 +23,7 @@ spec:
       repository: quay.io/external_storage/nfs-client-provisioner
       tag: v3.1.0-k8s1.11
     nfs:
-      path: /mnt/myVol/kubeNFS
+      path: /mnt/myVol/kubeNFS/data
       server: 10.68.69.2     
     storageClass:
       # defaultClass: true

@@ -15,9 +15,13 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    radarr:
-      env:
-        TZ: America/New_York
-      service:
-        type: LoadBalancer
-        port: 7878
+    env:
+      TZ: UTC
+    ingress:
+      enabled: true
+      annotations: 
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+      hosts:
+        - host: radarr.kube.com
+         

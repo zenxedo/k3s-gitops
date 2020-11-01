@@ -46,11 +46,11 @@ spec:
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: nfs-client-provisioner
+  name: Stable
   namespace: flux-system
 spec:
   interval: 1m
-  url: quay.io/external_storage/nfs-client-provisioner 
+  url: https://kubernetes-charts.storage.googleapis.com
  
 
 

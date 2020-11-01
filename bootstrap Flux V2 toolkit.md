@@ -113,6 +113,10 @@ flux bootstrap github \
   --path= \
   --personal
  ```
+ ### Must install if using NFS provisioner
+ ```
+ sudo apt update && sudo apt install -y nfs-common
+ ```
 
 ### Helpful Commands
 ```
@@ -124,6 +128,7 @@ kubectl get pv
 kubectl get deployments
 kubectl get pods -n foo
 kubectl get pods --all-namespaces
+kubectl get pods,deployments,services,helmreleases,pv --namespace=media
 kubectl patch pv nfs-data-pv -p '{"spec":{"persistentVolumeReclaimPolicy":"Delete"}}'
 
 
@@ -141,8 +146,6 @@ sudo systemctl "status,stop,start,or restart" k3s
 uninstall ks3
 /usr/local/bin/k3s-uninstall.sh
 
-Add for NFS:
-sudo apt update && sudo apt install -y nfs-common
 
 curl https://raw.githubusercontent.com/zenxedo/k3s-gitops/master/bootstrap-cluster.sh | bash
 git clone https://github.com/zenxedo/k3s-gitops.git $HOME/gitops

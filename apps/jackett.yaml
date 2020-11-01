@@ -18,13 +18,7 @@ spec:
     jackett:
       env:
         TZ: "America/New_York"
-      persistence:
-        type: deployment
-        config:
-          enabled: true
-          storageClass: media
-          accessMode: ReadWriteOnce
-          size: 1Gi
+    
        
 
 

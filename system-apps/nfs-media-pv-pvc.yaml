@@ -32,5 +32,5 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ""
+  storageClassName: nfs-client-nas
   volumeName: mnt-nfs-media-nas

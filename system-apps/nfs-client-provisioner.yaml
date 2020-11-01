@@ -14,7 +14,7 @@ spec:
       version: "1.2.x"
       sourceRef:
         kind: HelmRepository
-        name: Stable
+        name: stable
         namespace: flux-system
       interval: 1m
   values:    

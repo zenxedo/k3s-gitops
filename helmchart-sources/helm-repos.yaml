@@ -14,7 +14,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://kubernetes.github.io/dashboard/ 
+  url: https://kubernetes.github.io/dashboard/   
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
@@ -42,16 +42,8 @@ metadata:
 spec:
   interval: 1m
   url: https://halkeye.github.io/helm-charts/
----
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: HelmRepository
-metadata:
-  name: Stable
-  namespace: flux-system
-spec:
-  interval: 1m
-  url: https://kubernetes-charts.storage.googleapis.com
- 
+
+
 
 
 

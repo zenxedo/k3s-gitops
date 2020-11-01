@@ -22,7 +22,7 @@ spec:
       path: /mnt/myVol/kubeNFS/data
       server: 10.68.69.2     
     storageClass:
-      # defaultClass: true
+      defaultClass: false
       name: "nfs-client-nas"
 #needed to run for NFS:
 #sudo apt update && sudo apt install -y nfs-common      

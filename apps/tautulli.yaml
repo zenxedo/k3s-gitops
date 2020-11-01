@@ -17,7 +17,9 @@ spec:
   values:
     tautulli:
       env:
-        TZ: America/New_York
-      service:
-        type: LoadBalancer
-        port: 8181  
+        TZ: "America/New_York"
+      persistence:
+        type: deployment
+        config:
+          enabled: true
+          existingClaim: nfs-media-pvc

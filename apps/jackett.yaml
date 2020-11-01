@@ -15,12 +15,22 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    ingress:
-      enabled: true     
-      hosts:
+    jackett:
+      env:
+        TZ: America/Los_Angeles
+      ingress:
+        enabled: true
+        annotations:
+         # traefik.ingress.kubernetes.io/router.middlewares: system-cf-access-auth@kubernetescrd
+        hosts:
         - jack.kube.com
       persistence:
-        enabled: true
+        config:
+          enabled: true
+          storageClass: local
+          accessMode: ReadWriteOnce
+          size: 1Gi
+
 
 
 

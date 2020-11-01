@@ -24,3 +24,5 @@ spec:
     storageClass:
       # defaultClass: true
       name: "nfs-client-nas"
+#needed to run for NFS:
+#sudo apt update && sudo apt install -y nfs-common      

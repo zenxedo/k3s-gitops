@@ -19,10 +19,11 @@ spec:
       env:
         TZ: "America/New_York"
       persistence:
-      config:
-        enabled: true
-        storageClass: "local-path"
-        accessMode: ReadWriteOnce
-        path: /mnt
-        size: 1Gi
+        type: deployment
+        config:
+          enabled: true
+          storageClass: "local-path"
+          accessMode: ReadWriteOnce
+          path: /mnt
+          size: 1Gi
      

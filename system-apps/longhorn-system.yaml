@@ -1,3 +1,4 @@
+---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -19,7 +20,11 @@ spec:
       defaultClassReplicaCount: 1
     defaultSettings:
       defaultReplicaCount: 1
+     #storageMinimalAvailablePercentage: 10
       createDefaultDiskLabeledNodes: true
       nodeLevelSoftAntiAffinity: true
       #backupTarget: s3://longhorn@192.168.1.39/backups
       #backupTargetCredentialSecret: longhorn-backup-secret
+    ingress:
+      enabled: true
+      host: longhorn.kube.com 

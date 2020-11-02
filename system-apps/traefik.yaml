@@ -29,5 +29,7 @@ spec:
     service:
       spec:
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?    
-
+    ingress:
+      enabled: true
+      host: traefik.kube.com
 

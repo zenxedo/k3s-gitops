@@ -30,6 +30,8 @@ spec:
       spec:
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?    
 
+---        
+
 # dashboard.yaml
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute

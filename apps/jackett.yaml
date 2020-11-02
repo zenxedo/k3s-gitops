@@ -27,15 +27,16 @@ spec:
     timezone: "America/New_York"
     puid: 1000
     pgid: 1000
-    #persistence:
-    #  type: deployment
-   #   config:
-    #    enabled: true
-     #   existingClaim: nfs-media-pvc
-          #enabled: true
-          #storageClass: media
-          #accessMode: ReadWriteOnce
-          #size: 1Gi    
+    persistence:
+      config:
+        enabled: true
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        path: /mnt
+        size: 1Gi
+      media:
+        enabled: false  
+        
     
        
 

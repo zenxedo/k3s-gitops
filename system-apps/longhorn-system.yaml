@@ -20,5 +20,6 @@ spec:
     defaultSettings:
       defaultReplicaCount: 1
       createDefaultDiskLabeledNodes: true
+      nodeLevelSoftAntiAffinity: true
       #backupTarget: s3://longhorn@192.168.1.39/backups
       #backupTargetCredentialSecret: longhorn-backup-secret

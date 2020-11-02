@@ -16,9 +16,9 @@ spec:
       interval: 1m
   values:
     persistence:
-      defaultClassReplicaCount: 3
+      defaultClassReplicaCount: 1
     defaultSettings:
-      defaultReplicaCount: 3
+      defaultReplicaCount: 1
       createDefaultDiskLabeledNodes: true
       #backupTarget: s3://longhorn@192.168.1.39/backups
       #backupTargetCredentialSecret: longhorn-backup-secret

@@ -146,6 +146,8 @@ sudo systemctl "status,stop,start,or restart" k3s
 
 kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 
+(PersistentVolume, PersistentVolumeClaim, StorageClass, Deployment, StatefulSet, DaemonSet, etc
+
 
 uninstall ks3
 /usr/local/bin/k3s-uninstall.sh

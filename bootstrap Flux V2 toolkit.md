@@ -158,6 +158,10 @@ git clone https://github.com/zenxedo/k3s-gitops.git $HOME/gitops
 
 flux reconcile ks flux-system --with-source
 flux reconcile hr flux-system --with-source
+
+shorthand kubectl:
+alias k=kubectl
+complete -F __start_kubectl k
 ```
 
 ### Explanation of Ingress services

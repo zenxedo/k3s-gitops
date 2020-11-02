@@ -69,7 +69,7 @@ curl -sfL https://get.k3s.io | sh -
 Change permissions to global. this is creates a security risk and should only be used for testing but was needed to get working quickly
 
 ```
-curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik
+curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik --no-deploy=local-storage
 ```
 ```
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml

@@ -27,7 +27,7 @@ spec:
     persistence:
       config:
         enabled: true
-        storageClass: "local-storage"
+        storageClass: "local-path"
         accessMode: ReadWriteOnce
         path: /mnt
         size: 1Gi

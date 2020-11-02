@@ -22,11 +22,3 @@ spec:
       createDefaultDiskLabeledNodes: true
       #backupTarget: s3://longhorn@192.168.1.39/backups
       #backupTargetCredentialSecret: longhorn-backup-secret
-    ingress:
-      enabled: true
-      annotations:
-        kubernetes.io/ingress.class: "internal"
-      host: "longhorn.kube.com" 
-    metadata:
-      annotations:
-        storageclass.kubernetes.io/is-default-class: false 

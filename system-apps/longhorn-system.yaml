@@ -20,7 +20,7 @@ spec:
       defaultClassReplicaCount: 1
     defaultSettings:
       defaultReplicaCount: 1
-     #storageMinimalAvailablePercentage: 10
+      storageMinimalAvailablePercentage: 5
       createDefaultDiskLabeledNodes: true
       replicaSoftAntiAffinity: true
       #backupTarget: s3://longhorn@192.168.1.39/backups

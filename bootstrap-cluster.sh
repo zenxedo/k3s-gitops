@@ -7,7 +7,7 @@ installKs3() {
   curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik
 }
 
-install docker() {
+installdocker() {
    message "installing ks3"
    curl -fsSL get.docker.com -o get-docker.sh
    sudo sh get-docker.sh

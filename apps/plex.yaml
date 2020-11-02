@@ -22,6 +22,9 @@ spec:
     env:
       TZ: America/New_York
     persistence:
+      config:
+        enabled: false
+        size: 1gb
       transcode:
         enabled: false
         size: 1gb

@@ -8,13 +8,13 @@ installKs3() {
 }
 
 installdocker() {
-   message "installing ks3"
-   curl -fsSL get.docker.com -o get-docker.sh
-   sudo sh get-docker.sh
+  message "installing docker"
+  curl -fsSL get.docker.com -o get-docker.sh
+  sudo sh get-docker.sh
 }
 
 need() {
-    which "$1" &>/dev/null || die "Binary '$1' is missing but required"
+  which "$1" &>/dev/null || die "Binary '$1' is missing but required"
 }
 
 need "kubectl"

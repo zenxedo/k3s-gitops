@@ -27,8 +27,9 @@ spec:
     persistence:
       config:
         enabled: true
-        storageClass: "longhorn"
+        storageClass: "local-storage"
         accessMode: ReadWriteOnce
+        path: /mnt
         size: 1Gi
       media:
         enabled: false  

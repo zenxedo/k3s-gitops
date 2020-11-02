@@ -7,6 +7,12 @@ installKs3() {
   curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --no-deploy=traefik
 }
 
+install docker() {
+   message "installing ks3"
+   curl -fsSL get.docker.com -o get-docker.sh
+   sudo sh get-docker.sh
+}
+
 need() {
     which "$1" &>/dev/null || die "Binary '$1' is missing but required"
 }
@@ -22,11 +28,7 @@ message() {
 
 installFlux() {
   message "installing flux"
-  # install flux
-  helm repo add fluxcd https://charts.fluxcd.io
-  helm upgrade --install flux --values "$REPO_ROOT"/flux/flux-values.yaml --namespace flux fluxcd/flux
-  helm upgrade --install helm-operator --values "$REPO_ROOT"/flux/helm-operator/flux-helm-operator-values.yaml --namespace flux fluxcd/helm-operator
-
+  
   FLUX_READY=1
   while [ $FLUX_READY != 0 ]; do
     echo "waiting for flux pod to be fully ready..."

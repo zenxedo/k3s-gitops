@@ -19,7 +19,10 @@ spec:
       env:
         TZ: "America/New_York"
       persistence:
-        type: deployment
-        config:
-          enabled: true
-          existingClaim: nfs-media-pvc
+      config:
+        enabled: true
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        path: /mnt
+        size: 1Gi
+     

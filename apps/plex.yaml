@@ -23,11 +23,11 @@ spec:
       TZ: America/New_York
     persistence:
       config:
-        enabled: false
+        enabled: true
         size: 1gb
       transcode:
-        enabled: false
+        enabled: true
         size: 1gb
       data:  
-        enabled: false
+        enabled: true
         size: 1gb

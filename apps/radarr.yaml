@@ -15,6 +15,9 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
+    image:
+      repository: linuxserver/radarr
+      tag: version-3.0.0.3986
     env:
       TZ: UTC
       timezone: "America/New_York"

@@ -22,6 +22,6 @@ spec:
         - sonarr.kube.com
     sonarr:
       env:
-      #  TZ: America/New_York
-      #  puid: 1000
-      #  pgid: 1000   
+       # TZ: America/New_York
+       # puid: 1000
+       # pgid: 1000   

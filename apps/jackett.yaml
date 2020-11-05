@@ -18,8 +18,8 @@ spec:
   values:   
     ingress:
       enabled: true
-    # annotations:
-      # kubernetes.io/ingress.class: "external"
+     # annotations:
+       # kubernetes.io/ingress.class: "external"
       hosts:
         - "jackett.kube.com"
       tls:

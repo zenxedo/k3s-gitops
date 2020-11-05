@@ -39,5 +39,4 @@ spec:
         path: /mnt
         size: 1Gi
       media:
-        enabled: false  
-        
+        enabled: false

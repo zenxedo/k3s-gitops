@@ -16,20 +16,27 @@ spec:
       interval: 1m
   values:
     additionalArguments:
-      - "--log.level=DEBUG"     
-      #- "--metrics.prometheus=true"
+      - "--log.level=DEBUG"      
       - "--api.dashboard=true"
       - "--api.insecure=true"
       - "--serversTransport.insecureSkipVerify=true" # for k8s dash
-      - "--entryPoints.web.forwardedHeaders.insecure"
-      # - "--entrypoints.fooudp.address=:8191/udp"
-     # - "--providers.kubernetesingress.ingressclass=traefik-external"
-     # - "--providers.kubernetescrd"
+      - "--entryPoints.web.forwardedHeaders.insecure" 
 
     service:
       spec:
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?    
-    ingress:
-      enabled: true
-      host: traefik.kube.com
-
+---
+# dashboard.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`traefik.kube.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService

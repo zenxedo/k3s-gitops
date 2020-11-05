@@ -1,17 +1,17 @@
 ignore: |
-  .yamllint.yml
+  .yamllint.yaml
   .github/
-  ansible/
-  integrations/
-  ignore/
-  *-crds.yaml
+  deployments/flux-system
+  deployments/zz_generated_secrets.yaml
 extends: default
 rules:
   truthy:
-    allowed-values: ['true', 'false', 'on', 'yes']
+    allowed-values: ["true", "false", "on", "yes"]
   comments:
     min-spaces-from-content: 1
-  line-length: disable
+  line-length:
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
   braces:
     min-spaces-inside: 0
     max-spaces-inside: 1

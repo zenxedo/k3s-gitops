@@ -14,9 +14,6 @@ spec:
   mountOptions:
     - hard
     - nfsvers=3
-# claimRef:
-  # namespace: media
-  # name: nfs-media-nas
   storageClassName: media
   nfs:
     path: /mnt/myVol/kubeNFS

@@ -6,7 +6,7 @@ kind: HelmRelease
 metadata:
   name: nfs-client-provisioner
   namespace: media
-spec:  
+spec:
   interval: 5m
   chart:
     spec:

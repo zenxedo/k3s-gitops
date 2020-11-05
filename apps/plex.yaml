@@ -29,6 +29,6 @@ spec:
       transcode:
         enabled: true
         size: 1Gi
-      data:  
+      data:
         enabled: true
         size: 1Gi

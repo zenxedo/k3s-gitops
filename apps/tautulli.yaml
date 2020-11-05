@@ -1,3 +1,4 @@
+---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -44,5 +45,4 @@ spec:
           storageClass: "local-path"
           accessMode: ReadWriteOnce
          # path: /mnt
-          size: 1Gi
-     
+          size: 1Gi  

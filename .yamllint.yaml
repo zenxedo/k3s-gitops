@@ -11,9 +11,7 @@ rules:
     allowed-values: ["true", "false", "on", "yes"]
   comments:
     min-spaces-from-content: 1
-  line-length:
-    allow-non-breakable-words: true
-    allow-non-breakable-inline-mappings: true
+  line-length: disable
   braces:
     min-spaces-inside: 0
     max-spaces-inside: 1

@@ -24,16 +24,14 @@ spec:
       labels:
       hosts:
         - host: tautulli.kube.com
-    tautulli:
-      env:
-        TZ: "America/New_York"
-        puid: 1000
-        pgid: 1000
-      persistence:
-        type: deployment
-        config:
-          enabled: true
-          storageClass: "local-path"
-          accessMode: ReadWriteOnce
-          path: "/mnt"
-          size: 1Gi
+    TZ: "America/New_York"
+    puid: 1000
+    pgid: 1000
+    persistence:
+      type: deployment
+      config:
+        enabled: true
+        storageClass: " local-path"
+        accessMode: ReadWriteOnce
+        path: "/mnt"
+        size: 1Gi

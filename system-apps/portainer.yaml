@@ -70,4 +70,4 @@ spec:
         ports:
         - containerPort: 9000
           protocol: TCP
----          
+---

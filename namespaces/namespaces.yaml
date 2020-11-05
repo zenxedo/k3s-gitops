@@ -9,7 +9,3 @@ kind: Namespace
 metadata:
   name: system
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: longhorn-system

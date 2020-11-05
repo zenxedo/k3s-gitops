@@ -15,10 +15,10 @@ spec:
         name: stable
         namespace: flux-system
       interval: 1m
-  values:    
+  values:
     nfs:
       path: /mnt/myVol/kubeNFS/data
-      server: 10.68.69.2     
+      server: 10.68.69.2
     storageClass:
       defaultClass: false
       name: "nfs-client-nas"

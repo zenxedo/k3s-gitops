@@ -5,6 +5,7 @@ ignore: |
   system-apps/local-storage.yaml
   deployments/zz_generated_secrets.yaml
   system-apps/kube-dash.yaml
+  system-apps/portainer.yaml
 extends: default
 rules:
   truthy:

@@ -16,12 +16,20 @@ spec:
       interval: 1m
   values:
     additionalArguments:
-      - "--log.level=DEBUG"      
+      - "--global.checknewversion"
+      - "--global.sendanonymoususage"
+      - "--entryPoints.traefik.address=:9000/tcp"
+      - "--entryPoints.web.address=:8000/tcp"
+      - "--entryPoints.websecure.address=:8443/tcp"
+      - "--api.dashboard=true"
+      - "--ping=true"
+      - "--providers.kubernetescrd"
+      - "--providers.kubernetesingress"
+      - "--log.level=DEBUG"
       - "--api.dashboard=true"
       - "--api.insecure=true"
-      - "--serversTransport.insecureSkipVerify=true" # for k8s dash
-      - "--entryPoints.web.forwardedHeaders.insecure" 
-
+      - "--serversTransport.insecureSkipVerify=true"  # for k8s dash
+      - "--entryPoints.web.forwardedHeaders.insecure"
     service:
       spec:
         externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?    

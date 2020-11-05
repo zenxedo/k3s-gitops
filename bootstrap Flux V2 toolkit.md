@@ -110,7 +110,7 @@ flux bootstrap github \
   --owner=zenxedo \
   --repository=k3s-gitops \
   --branch=master \
-  --path= \
+  --path=./deployments \
   --personal
  ```
  ### Must install if using NFS provisioner

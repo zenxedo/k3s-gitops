@@ -4,6 +4,7 @@ ignore: |
   flux-system
   system-apps/local-storage.yaml
   deployments/zz_generated_secrets.yaml
+  system-apps/kube-dash.yaml
 extends: default
 rules:
   truthy:

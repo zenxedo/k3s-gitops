@@ -52,7 +52,7 @@ metadata:
   name: portainer
   namespace: portainer
   labels:
-    io.portainer.kubernetes.application.stack: portainer    
+    io.portainer.kubernetes.application.stack: portainer
 spec:
   selector:
     matchLabels:
@@ -70,3 +70,4 @@ spec:
         ports:
         - containerPort: 9000
           protocol: TCP
+---          

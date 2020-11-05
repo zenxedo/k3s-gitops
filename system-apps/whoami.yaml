@@ -17,6 +17,6 @@ spec:
       interval: 1m
   values:
     ingress:
-      enabled: true     
+      enabled: true  
       hosts:
         - whoami.kube.com

@@ -24,10 +24,10 @@ spec:
     persistence:
       config:
         enabled: true
-        size: 1gb
+        size: 1Gi
       transcode:
         enabled: true
-        size: 1gb
+        size: 1Gi
       data:  
         enabled: true
-        size: 1gb
+        size: 1Gi

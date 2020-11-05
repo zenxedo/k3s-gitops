@@ -1,7 +1,7 @@
 ignore: |
   .yamllint.yaml
   .github/
-  deployments/flux-system
+  /flux-system
   deployments/zz_generated_secrets.yaml
 extends: default
 rules:

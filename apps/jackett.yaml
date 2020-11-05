@@ -15,7 +15,7 @@ spec:
         name: k8s-at-home
         namespace: flux-system
       interval: 1m
-  values:   
+  values:
     ingress:
       enabled: true
       annotations:
@@ -23,8 +23,8 @@ spec:
       hosts:
         - "jackett.kube.com"
       tls:
-      - hosts:
-        - "jackett.kube.com"
+        hosts:
+          - "jackett.kube.com"
     timezone: "America/New_York"
     puid: 1000
     pgid: 1000

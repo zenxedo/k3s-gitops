@@ -17,7 +17,7 @@ spec:
 # claimRef:
   # namespace: media
   # name: nfs-media-nas
-  storageClassName: media  
+  storageClassName: media
   nfs:
     path: /mnt/myVol/kubeNFS
     server: 10.68.69.2

@@ -17,7 +17,7 @@ spec:
       interval: 1m
   values:
     ingress:
-      enabled: true     
+      enabled: true
       hosts:
         - plex.kube.com
     env:

@@ -24,8 +24,8 @@ spec:
       - "--entryPoints.websecure.address=:8443/tcp"
       - "--api.dashboard=true"
       - "--ping=true"
-     # - "--providers.kubernetescrd"
-     # - "--providers.kubernetesingress"
+    # - "--providers.kubernetescrd"
+    # - "--providers.kubernetesingress"
       - "--log.level=DEBUG"
       - "--api.dashboard=true"
       - "--api.insecure=true"
@@ -33,7 +33,7 @@ spec:
       - "--entryPoints.web.forwardedHeaders.insecure"
     service:
       spec:
-        externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?    
+        externalTrafficPolicy: Local # https://github.com/rancher/k3s/issues/1652 need this for X-Real-Ip?
 ---
 # dashboard.yaml
 apiVersion: traefik.containo.us/v1alpha1

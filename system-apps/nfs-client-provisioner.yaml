@@ -4,9 +4,9 @@ kind: HelmRelease
 metadata:
   name: nfs-client-provisioner
   namespace: media
-  #annotations:
-  #  fluxcd.io/ignore: "false"
- #k   fluxcd.io/automated: "false"
+# annotations:
+  # fluxcd.io/ignore: "false"
+  # fluxcd.io/automated: "false"
 spec:  
   interval: 5m
   chart:

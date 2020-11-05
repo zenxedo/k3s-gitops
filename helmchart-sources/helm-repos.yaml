@@ -15,7 +15,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://kubernetes.github.io/dashboard/   
+  url: https://kubernetes.github.io/dashboard/
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
@@ -24,7 +24,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://k8s-at-home.com/charts/ 
+  url: https://k8s-at-home.com/charts/
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository

@@ -17,23 +17,23 @@ spec:
   values:
     tautulli:
       env:
-        TZ: "America/New_York"
-        timezone: "America/New_York"
-        puid: 1000
-        pgid: 1000
+    #    TZ: "America/New_York"
+  #      timezone: "America/New_York"
+    #    puid: 1000
+    #    pgid: 1000
       ingress:
-      enabled: true
-      annotations: 
+        enabled: true
+        annotations: 
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
-      hosts:
-        - host: tautulli.kube.com  
+        hosts:
+          - host: tautulli.kube.com  
       persistence:
         type: deployment
         config:
           enabled: true
           storageClass: "local-path"
           accessMode: ReadWriteOnce
-          path: /mnt
+         # path: /mnt
           size: 1Gi
      

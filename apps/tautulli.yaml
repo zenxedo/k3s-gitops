@@ -24,20 +24,11 @@ spec:
       labels:
       hosts:
         - host: tautulli.kube.com
-          paths:
-            - path: /
-             # Ignored if not kubeVersion >= 1.14-0
-              pathType: Prefix
-      tls: 
-      #  - secretName: chart-example-tls
-      #    hosts:
-      #      - chart-example.local
     tautulli:
       env:
-    #    TZ: "America/New_York"
-  #      timezone: "America/New_York"
-    #    puid: 1000
-    #    pgid: 1000
+        TZ: "America/New_York"
+        puid: 1000
+        pgid: 1000
       persistence:
         type: deployment
         config:

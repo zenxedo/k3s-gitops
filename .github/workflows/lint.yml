@@ -13,7 +13,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Lint yaml
-      uses: ibiqlik/action-yamllint@v1
+      uses: ibiqlik/action-yamllint@v2
   lint-shell:
     runs-on:
     - ubuntu-latest

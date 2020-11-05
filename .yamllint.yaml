@@ -1,11 +1,11 @@
 ignore: |
   .yamllint.yaml
   .github/
-  flux-system
-  system-apps/local-storage.yaml
+  deployments/flux-system
+  deployments/system-apps/local-storage.yaml
   deployments/zz_generated_secrets.yaml
-  system-apps/kube-dash.yaml
-  system-apps/portainer.yaml
+  deploymetns/system-apps/kube-dash.yaml
+  deployments/system-apps/portainer.yaml
 extends: default
 rules:
   truthy:

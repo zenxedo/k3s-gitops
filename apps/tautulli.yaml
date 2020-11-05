@@ -35,5 +35,5 @@ spec:
           enabled: true
           storageClass: "local-path"
           accessMode: ReadWriteOnce
-         # path: /mnt
+        # path: /mnt
           size: 1Gi  

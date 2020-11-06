@@ -49,4 +49,19 @@ spec:
       #  valueFrom:
        #   secretKeyRef:
         #   name: cloudflare-api-key
-         #  key: api-key   
+         #  key: api-key
+---
+# dashboard.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`traefik.kube.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService

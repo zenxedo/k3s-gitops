@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: "9.8.x"
+      version: "9.10.x"
       sourceRef:
         kind: HelmRepository
         name: traefik

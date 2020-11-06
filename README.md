@@ -28,29 +28,6 @@ _Below are some of the tools I find useful for working with my cluster_
 | [direnv](https://github.com/direnv/direnv)             | Set `KUBECONFIG` environment variable based on present working directory                                  |
 | [git-crypt](https://github.com/AGWA/git-crypt)         | Encrypt certain files in my repository that can only be decrypted with a key on my computers              |
 
----
-
-## :computer:&nbsp; Hardware configuration
-
-_All my Kubernetes master and worker nodes below are running bare metal Ubuntu 20.04.x_
-
-| Device                  | Count | OS Disk Size | Data Disk Size      | Ram  | Purpose                                |
-|-------------------------|-------|--------------|---------------------|------|----------------------------------------|
-| Proxmox                 | 1     | 10GB SSD     | N/A                 | 16GB | k8s Master                             |
-| Intel NUC8i5BEH         | 3     | 120GB SSD    | 1TB NVMe (longhorn) | 32GB | k8s Workers                            |
-
-
----
-
-## :memo:&nbsp; IP addresses
-
-_This table is a reference to IP addresses in my deployments and may not be fully up-to-date_
-
-| Deployment               | Address        |
-|--------------------------|----------------|
-| nginx-ingress (external) | 192.168.69.100 |
-| nginx-ingress (internal) | 192.168.69.101 |
-
 
 ---
 
@@ -60,5 +37,5 @@ A lot of inspiration for this repo came from the following people:
 
 - [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)
 - [onedr0p/k3s-gitops](https://github.com/onedr0p/k3s-gitops)
-https://github.com/bjw-s/k8s-gitops
-https://github.com/nickysemenza/k3s
+(https://github.com/bjw-s/k8s-gitops)
+(https://github.com/nickysemenza/k3s)

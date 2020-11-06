@@ -6,6 +6,7 @@ ignore: |
   deployments/zz_generated_secrets.yaml
   deploymetns/system-apps/kube-dash.yaml
   deployments/system-apps/portainer.yaml
+  deployments/system-apps/traefik/traefik.yaml
 extends: default
 rules:
   truthy:

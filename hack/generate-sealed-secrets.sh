@@ -55,12 +55,12 @@ cat >>"${GENERATED_SECRETS}" <<-EOF
 EOF
 
 # NginX Basic Auth - default namespace
-kubectl create secret generic nginx-basic-auth \
-    --from-literal=auth="${NGINX_BASIC_AUTH}" \
-    --namespace default --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic nginx-basic-auth \
+#    --from-literal=auth="${NGINX_BASIC_AUTH}" \
+#    --namespace default --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # Cloudflare API Key - cert-manager namespace
 kubectl create secret generic cloudflare-api-key \
@@ -71,55 +71,55 @@ kubectl create secret generic cloudflare-api-key \
 echo "---" >>"${GENERATED_SECRETS}"
 
 # qBittorrent Prune - default namespace
-kubectl create secret generic qbittorrent-prune \
-    --from-literal=username="${QB_USERNAME}" \
-    --from-literal=password="${QB_PASSWORD}" \
-    --namespace default --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic qbittorrent-prune \
+#    --from-literal=username="${QB_USERNAME}" \
+#    --from-literal=password="${QB_PASSWORD}" \
+#    --namespace default --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # sonarr episode prune - default namespace
-kubectl create secret generic sonarr-episode-prune \
-    --from-literal=api-key="${SONARR_APIKEY}" \
-    --namespace default --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic sonarr-episode-prune \
+#    --from-literal=api-key="${SONARR_APIKEY}" \
+#    --namespace default --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # sonarr exporter
-kubectl create secret generic sonarr-exporter \
-    --from-literal=api-key="${SONARR_APIKEY}" \
-    --namespace monitoring --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic sonarr-exporter \
+#    --from-literal=api-key="${SONARR_APIKEY}" \
+#    --namespace monitoring --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # radarr exporter
-kubectl create secret generic radarr-exporter \
-    --from-literal=api-key="${RADARR_APIKEY}" \
-    --namespace monitoring --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic radarr-exporter \
+#    --from-literal=api-key="${RADARR_APIKEY}" \
+#    --namespace monitoring --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # uptimerobot heartbeat
-kubectl create secret generic uptimerobot-heartbeat \
-    --from-literal=url="${UPTIMEROBOT_HEARTBEAT_URL}" \
-    --namespace monitoring --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic uptimerobot-heartbeat \
+#    --from-literal=url="${UPTIMEROBOT_HEARTBEAT_URL}" \
+#    --namespace monitoring --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # longhorn backup secret
-kubectl create secret generic longhorn-backup-secret \
-    --from-literal=AWS_ACCESS_KEY_ID="${MINIO_ACCESS_KEY}" \
-    --from-literal=AWS_SECRET_ACCESS_KEY="${MINIO_SECRET_KEY}" \
-    --from-literal=AWS_ENDPOINTS="http://192.168.1.39:9000" \
-    --namespace longhorn-system --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic longhorn-backup-secret \
+#    --from-literal=AWS_ACCESS_KEY_ID="${MINIO_ACCESS_KEY}" \
+#    --from-literal=AWS_SECRET_ACCESS_KEY="${MINIO_SECRET_KEY}" \
+#    --from-literal=AWS_ENDPOINTS="http://192.168.1.39:9000" \
+#    --namespace longhorn-system --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # Fluxcloud
 # kubectl create secret generic fluxcloud \
@@ -130,12 +130,12 @@ echo "---" >>"${GENERATED_SECRETS}"
 # echo "---" >> "${GENERATED_SECRETS}"
 
 # Github Runner
-kubectl create secret generic controller-manager \
-    --from-literal=github_token="${GITHUB_RUNNER_ACCESS_TOKEN}" \
-    --namespace actions-runner-system --dry-run=client -o json |
-    kubeseal --format=yaml --cert="${PUB_CERT}" \
-        >>"${GENERATED_SECRETS}"
-echo "---" >>"${GENERATED_SECRETS}"
+#kubectl create secret generic controller-manager \
+#    --from-literal=github_token="${GITHUB_RUNNER_ACCESS_TOKEN}" \
+#    --namespace actions-runner-system --dry-run=client -o json |
+#    kubeseal --format=yaml --cert="${PUB_CERT}" \
+#        >>"${GENERATED_SECRETS}"
+#echo "---" >>"${GENERATED_SECRETS}"
 
 # Remove empty new-lines
 sed -i '/^[[:space:]]*$/d' "${GENERATED_SECRETS}"

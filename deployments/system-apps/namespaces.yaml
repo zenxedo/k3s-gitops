@@ -13,3 +13,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: portainer
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cert-manager

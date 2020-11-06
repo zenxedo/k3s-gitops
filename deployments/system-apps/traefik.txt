@@ -1,0 +1,2 @@
+CF Email: $CF_API_EMAIL
+CF Key: $CF_API_KEY

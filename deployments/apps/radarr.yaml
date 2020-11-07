@@ -26,10 +26,10 @@ spec:
     ingress:
       enabled: true
       hosts:
-      - host: radarr.kube.com
-        paths:
-        - path: /
-        pathType: Prefix
+        - host: radarr.kube.com
+          paths:
+            - path: /
+              pathType: Prefix
     persistence:
       config:
         enabled: true

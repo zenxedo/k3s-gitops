@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: portainer
-      version: "4.0.x"
+      version: "1.0.x"
       sourceRef:
         kind: HelmRepository
         name: portainer

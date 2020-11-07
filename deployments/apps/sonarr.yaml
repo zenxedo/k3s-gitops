@@ -16,37 +16,23 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    ingress:
-      enabled: true
-      hosts:
-        - sonarr.kube.com
-      tls:
-        hosts:
-          - "jackett.kube.com"
-    timezone: "America/New_York"
-    puid: 1000
-    pgid: 1000
-    persistence:
-      config:
+    sonarr:
+      ingress:
         enabled: true
-        storageClass: "local-path"
-        accessMode: ReadWriteOnce
-        path: /mnt
-        size: 1Gi
-      media:
-        enabled: false
----
-# dashboard.yaml
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: dashboard
-spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`traefik.kube.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
-      kind: Rule
-      services:
-        - name: api@internal
-          kind: TraefikServicek
+        hosts:
+          - sonarr.kube.com
+        tls:
+          hosts:
+            - "jackett.kube.com"
+      timezone: "America/New_York"
+      puid: 1000
+      pgid: 1000
+      persistence:
+        config:
+          enabled: true
+          storageClass: "local-path"
+          accessMode: ReadWriteOnce
+          path: /mnt
+          size: 1Gi
+        media:
+          enabled: false

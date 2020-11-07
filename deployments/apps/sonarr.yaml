@@ -20,10 +20,10 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - sonarr.kube.com
-        tls:
-          hosts:
-            - "jackett.kube.com"
+          - host: sonarr.kube.com
+            paths:
+              - path: /
+                pathType: Prefix
       timezone: "America/New_York"
       puid: 1000
       pgid: 1000

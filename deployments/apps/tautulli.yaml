@@ -28,7 +28,7 @@ spec:
             paths:
               - path: /
                 pathType: Prefix
-      persistence:  
+      persistence:
         config:
           enabled: true
           storageClass: " local-path"

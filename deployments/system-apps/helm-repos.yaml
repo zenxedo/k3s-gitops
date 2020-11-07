@@ -52,3 +52,13 @@ metadata:
 spec:
   interval: 1m
   url: https://portainer.github.io/k8s/
+---
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: rimusz
+  namespace: flux-system
+spec:
+  interval: 1h0m0s
+  url: https://charts.rimusz.net

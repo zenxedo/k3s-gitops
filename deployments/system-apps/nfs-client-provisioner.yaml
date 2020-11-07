@@ -11,10 +11,10 @@ spec:
   chart:
     spec:
       chart: nfs-client-provisioner
-      version: "1.2.x"
+      version: "0.1.x"
       sourceRef:
         kind: HelmRepository
-        name: stable
+        name: rimusz
         namespace: flux-system
       interval: 1m
   values:

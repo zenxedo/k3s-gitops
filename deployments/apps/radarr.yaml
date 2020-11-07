@@ -20,8 +20,7 @@ spec:
       repository: linuxserver/radarr
       tag: version-3.0.0.3986
     env:
-      TZ: UTC
-      timezone: "America/New_York"
+      TZ: "America/New_York"
       puid: 1000
       pgid: 1000
     ingress:
@@ -31,6 +30,9 @@ spec:
       # kubernetes.io/tls-acme: "true"
       hosts:
         - host: radarr.kube.com
+          paths:
+              - path: /
+                pathType: Prefix
     persistence:
       config:
         enabled: true

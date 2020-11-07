@@ -15,3 +15,8 @@ spec:
         name: portainer
         namespace: flux-system
       interval: 1m
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - portainer.kube.com  

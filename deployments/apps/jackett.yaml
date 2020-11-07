@@ -16,24 +16,22 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    ingress:
-      enabled: true
-      annotations:
-        ingressClassName: "traefik"
-      hosts:
-        - "jackett.kube.com"
-      tls:
-        hosts:
-          - "jackett.kube.com"
-    timezone: "America/New_York"
-    puid: 1000
-    pgid: 1000
-    persistence:
-      config:
+    jackett:
+      env:
+        timezone: "America/New_York"
+        puid: 1000
+        pgid: 1000
+      ingress:
         enabled: true
-        storageClass: "local-path"
-        accessMode: ReadWriteOnce
-        path: /mnt
-        size: 1Gi
-      media:
-        enabled: false
+        hosts:
+          - host: jackett.kube.com
+            paths:
+              - path: /
+                pathType: Prefix
+      persistence:
+        config:
+          enabled: true
+          storageClass: "local-path"
+          accessMode: ReadWriteOnce
+          path: /mnt
+          size: 1Gi

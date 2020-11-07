@@ -25,9 +25,6 @@ spec:
       pgid: 1000
     ingress:
       enabled: true
-      annotations:
-      # kubernetes.io/ingress.class: nginx
-      # kubernetes.io/tls-acme: "true"
       hosts:
         - host: radarr.kube.com
           paths:

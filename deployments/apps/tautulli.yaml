@@ -20,7 +20,7 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - host: sonarr.kube.com
+          - host: tautulli.kube.com
             paths:
               - path: /
                 pathType: Prefix

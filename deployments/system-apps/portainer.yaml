@@ -20,4 +20,6 @@ spec:
       enabled: true
       hosts:
         - host: portainer.kube.com
-          paths: /
+          paths:
+              - path: /
+                pathType: Prefix

@@ -51,4 +51,4 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://portainer.github.io/portainer-k8s
+  url: https://portainer.github.io/k8s/

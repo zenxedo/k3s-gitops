@@ -19,4 +19,4 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - portainer.kube.com  
+        - host: portainer.kube.com  

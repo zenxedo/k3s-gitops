@@ -23,8 +23,11 @@ flux bootstrap github \
   --path=./deployments \
   --personal
  ``` 
- ```
+```
  flux install \
   --components=source-controller,kustomize-controller,helm-controller,notification-controller \
   --namespace=flux-system
-  ```
+```
+```
+flux reconcile ks flux-system --with-source
+```

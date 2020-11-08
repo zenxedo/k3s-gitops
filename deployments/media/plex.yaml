@@ -15,7 +15,7 @@ spec:
         name: k8s-at-home
         namespace: flux-system
       interval: 1m
-  values: 
+  values:
     timezone: "America/New_York"
     plexUid: "8675309"
     plexGid: "8675309"

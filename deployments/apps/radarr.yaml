@@ -38,5 +38,5 @@ spec:
         media:
           enabled: true
           storageClass: "media"
-          accessMode: ReadWriteMany          
+          accessMode: ReadWriteMany      
           size: 1Gi

@@ -44,7 +44,6 @@ spec:
   interval: 1m
   url: https://portainer.github.io/k8s/
 ---
----
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
@@ -63,3 +62,21 @@ spec:
   interval: 24h
   url: https://kubernetes-charts.storage.googleapis.com/
   timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: halkeye
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://halkeye.github.io/helm-charts/
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: democratic-csi
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://democratic-csi.github.io/charts/

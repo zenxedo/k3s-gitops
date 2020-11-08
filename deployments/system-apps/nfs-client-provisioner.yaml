@@ -19,7 +19,7 @@ spec:
       interval: 1m
   values:
     nfs:
-      path: /mnt/myVol/kubeNFS/data
+      path: /mnt/myVol/kubeNFS
       server: 10.68.69.2
     storageClass:
       defaultClass: false

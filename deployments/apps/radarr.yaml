@@ -36,4 +36,7 @@ spec:
           path: /mnt
           size: 1Gi
         media:
-          enabled: false
+          enabled: true
+          storageClass: "media"
+          accessMode: ReadWriteMany          
+          size: 1Gi

@@ -15,20 +15,16 @@ spec:
         name: k8s-at-home
         namespace: flux-system
       interval: 1m
-  values:
-    plex:
-      env:
-        TZ: "America/New_York"
-        PUID: "8675309"
-        PGID: "8675309"
-      ingress:
-        enabled: true
-        hosts:
-          - host: plex.kube.com
-            paths:
-              - path: /
-                pathType: Prefix
-      persistence:
+  values: 
+    TZ: "America/New_York"
+    PUID: "8675309"
+    PGID: "8675309"
+    ingress:
+      enabled: true
+      hosts:
+        - plex.kube.com
+      path: /
+    persistence:
       config:
         enabled: true
         size: 1Gi
@@ -37,4 +33,4 @@ spec:
         size: 1Gi
       data:
         enabled: true
-        size: 1Gi
+        size: 1Gi  

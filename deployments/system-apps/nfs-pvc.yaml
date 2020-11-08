@@ -14,7 +14,9 @@ spec:
   mountOptions:
     - hard
     - nfsvers=3
-  storageClassName: media
+  claimRef:
+    namespace: media
+    name: nfs-media-pvc
   nfs:
     path: /mnt/myVol/kubeNFS
     server: 10.68.69.2
@@ -31,5 +33,5 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: media
+  storageClassName: ""
   volumeName: nfs-media-pv

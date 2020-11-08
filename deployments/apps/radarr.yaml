@@ -37,6 +37,4 @@ spec:
           size: 1Gi
         media:
           enabled: true
-          storageClass: "media"
-          accessMode: ReadWriteMany      
-          size: 1Gi
+          existingClaim: nfs-media-pvc

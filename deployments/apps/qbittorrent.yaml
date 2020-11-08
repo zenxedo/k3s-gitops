@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
-        namespace: flux
+        namespace: flux-system
       interval: 1m
   values:
     qbittorrent:

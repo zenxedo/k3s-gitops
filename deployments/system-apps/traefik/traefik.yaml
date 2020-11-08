@@ -17,13 +17,6 @@ spec:
       interval: 1m
   values:
     additionalArguments:
-      - "--global.checknewversion"
-      - "--global.sendanonymoususage"
-      - "--entryPoints.traefik.address=:9000/tcp"
-      - "--entryPoints.web.address=:8000/tcp"
-      - "--entryPoints.websecure.address=:8443/tcp"
-      - "--api.dashboard=true"
-      - "--ping=true"
      #- "--providers.kubernetescrd"
      #- "--providers.kubernetesingress"
       - "--log.level=DEBUG"

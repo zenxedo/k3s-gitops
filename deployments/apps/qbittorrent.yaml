@@ -14,16 +14,16 @@ spec:
         name: k8s-at-home
         namespace: flux
       interval: 1m
-    values:
-      qbittorrent:
-        env:
-          TZ: "America/New_York"
-          PUID: "8675309"
-          PGID: "8675309"
-        ingress:
-          enabled: true
-          hosts:
-            - host: qb.kube.com
-              paths:
-                - path: /
-                  pathType: Prefix
+  values:
+    qbittorrent:
+      env:
+        TZ: "America/New_York"
+        PUID: "8675309"
+        PGID: "8675309"
+      ingress:
+        enabled: true
+        hosts:
+          - host: qb.kube.com
+            paths:
+              - path: /
+                pathType: Prefix

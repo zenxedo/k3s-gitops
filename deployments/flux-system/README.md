@@ -7,8 +7,8 @@ curl -s https://toolkit.fluxcd.io/install.sh | sudo bash
 # enable completions in ~/.bash_profile
 . <(flux completion bash)
 ```
-verify
 ```
+# Verify
 flux check --pre
 ```
 ```
@@ -21,8 +21,8 @@ flux bootstrap github \
   --repository=k3s-gitops \
   --branch=master \
   --path=./deployments \
-  --personal ```
- 
+  --personal
+ ``` 
  ```
  flux install \
   --components=source-controller,kustomize-controller,helm-controller,notification-controller \

@@ -16,9 +16,9 @@ spec:
         namespace: flux-system
       interval: 1m
   values: 
-    TZ: "America/New_York"
-    PUID: "8675309"
-    PGID: "8675309"
+    timezone: "America/New_York"
+    plexUid: "8675309"
+    plexGid: "8675309"
     ingress:
       enabled: true
       hosts:
@@ -29,8 +29,6 @@ spec:
         enabled: true
         size: 1Gi
       transcode:
-        enabled: true
-        size: 1Gi
+        enabled: false
       data:
-        enabled: true
-        size: 1Gi  
+        enabled: false

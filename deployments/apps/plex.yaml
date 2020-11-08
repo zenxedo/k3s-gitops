@@ -16,13 +16,19 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    ingress:
-      enabled: true
-      hosts:
-        - plex.kube.com
-    env:
-      TZ: America/New_York
-    persistence:
+    plex:
+      env:
+        TZ: "America/New_York"
+        PUID: "8675309"
+        PGID: "8675309"
+      ingress:
+        enabled: true
+        hosts:
+          - host: plex.kube.com
+            paths:
+              - path: /
+                pathType: Prefix
+      persistence:
       config:
         enabled: true
         size: 1Gi

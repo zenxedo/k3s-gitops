@@ -17,10 +17,10 @@ spec:
       interval: 1m
   values:
     jackett:
-      env:
-        timezone: "America/New_York"
-        puid: 8675309
-        pgid: 8675309
+      env:        
+        TZ: "America/New_York"
+        PUID: "8675309"
+        PGID: "8675309"
       ingress:
         enabled: true
         hosts:

@@ -7,7 +7,7 @@ CLUSTER_ROOT="${REPO_ROOT}/deployments"
 export CLUSTER_ROOT
 PUB_CERT="${REPO_ROOT}/pub-cert.pem"
 export PUB_CERT
-SECRETS_ENV="/home/zenxedo/.cluster-secrets.env"
+SECRETS_ENV="${REPO_ROOT}/secret/.cluster-secrets.env"
 export SECRETS_ENV
 GENERATED_SECRETS="${CLUSTER_ROOT}/zz_generated_secrets.yaml"
 export GENERATED_SECRETS

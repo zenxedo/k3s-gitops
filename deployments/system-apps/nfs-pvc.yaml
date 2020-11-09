@@ -5,6 +5,7 @@ metadata:
   namespace: media
   name: nfs-media-pv
 spec:
+  storageClassName: media
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
@@ -33,5 +34,5 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ""
+  storageClassName: media
   volumeName: nfs-media-pv

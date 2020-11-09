@@ -15,3 +15,6 @@ spec:
         name: democratic-csi
         namespace: flux-system
       interval: 1m
+  values:
+    driver:
+      config:

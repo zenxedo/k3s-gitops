@@ -36,5 +36,12 @@ spec:
           path: /mnt
           size: 1Gi
         media:
-          enabled: true
-          existingClaim: nfs-media-pvc
+          enabled: false
+        additionalVolumes:
+          - name: nfs-media-pvc
+            persistentVolumeClaim:
+              claimName: nfs-media-pvc
+        additionalVolumeMounts:
+          - name: nfs-media-pvc
+            mountPath: "/mnt/media"
+            # subPath:

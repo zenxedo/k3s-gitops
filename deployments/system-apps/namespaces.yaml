@@ -22,9 +22,4 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: system-apps
----
-apiVersion: v1
-kind: Namespace
-metadata:
   name: democratic-csi

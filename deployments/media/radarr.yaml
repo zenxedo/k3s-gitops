@@ -31,6 +31,7 @@ spec:
     persistence:
       config:
         enabled: true
+        mountPath: "/config"
         storageClass: "local-path"
         accessMode: ReadWriteOnce
         path: /mnt

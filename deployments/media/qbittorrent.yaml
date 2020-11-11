@@ -8,23 +8,30 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: qbittorrent
-      version: "5.0.x"
+      chart: qbitorrent
+      version: "6.0.x"
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
       interval: 1m
   values:
-    qbittorrent:
-      env:
-        TZ: "America/New_York"
-        PUID: "8675309"
-        PGID: "8675309"
-      ingress:
+    controllerType: deployment
+    env:
+      TZ: "America/New_York"
+      PUID: "8675309"
+      PGID: "8675309"
+    ingress:
+      enabled: true
+      hosts:
+        - host: qb.kube.com
+          paths:
+            - path: /
+              pathType: Prefix
+    persistence:
+      config:
         enabled: true
-        hosts:
-          - host: qb.kube.com
-            paths:
-              - path: /
-                pathType: Prefix
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        path: /mnt
+        size: 1Gi

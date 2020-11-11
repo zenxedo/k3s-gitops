@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: radarr
-      version: "7.0.x"
+      version: "7.0.2"
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home

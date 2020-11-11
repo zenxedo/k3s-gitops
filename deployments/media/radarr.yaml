@@ -16,6 +16,7 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
+    controllerType: deployment
     env:
       TZ: "America/New_York"
       PUID: "8675309"

@@ -24,7 +24,7 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: soanrr.kube.com
+        - host: sonarr.kube.com
           paths:
             - path: /
               pathType: Prefix

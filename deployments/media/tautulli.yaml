@@ -9,29 +9,29 @@ spec:
   chart:
     spec:
       chart: tautulli
-      version: "4.0.x"
+      version: "5.0.x"
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
       interval: 1m
   values:
-    tautulli:
-      env:
-        TZ: "America/New_York"
-        PUID: "8675309"
-        PGID: "8675309"
-      ingress:
+    controllerType: deployment
+    env:
+      TZ: "America/New_York"
+      PUID: "8675309"
+      PGID: "8675309"
+    ingress:
+      enabled: true
+      hosts:
+        - host: tautulli.kube.com
+          paths:
+            - path: /
+              pathType: Prefix
+    persistence:
+      config:
         enabled: true
-        hosts:
-          - host: tautulli.kube.com
-            paths:
-              - path: /
-                pathType: Prefix
-      persistence:
-        config:
-          enabled: true
-          storageClass: "local-path"
-          accessMode: ReadWriteOnce
-          path: "/mnt"
-          size: 1Gi
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        path: /mnt
+        size: 1Gi

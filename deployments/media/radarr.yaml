@@ -39,3 +39,6 @@ spec:
         enabled: true
         existingClaim: nfs-media-pvc
         mountPath: "/mnt/media"
+    addons:
+      vpn:
+        enabled: false

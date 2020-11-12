@@ -2,7 +2,7 @@ ignore: |
   .yamllint.yaml
   .github/
   deployments/flux-system
-  deployments/system-apps/local-storage.yaml
+  deployments/kube-system
   deployments/zz_generated_secrets.yaml
   deployments/system-apps/traefik/traefik.yaml
 extends: default

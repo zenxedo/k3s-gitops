@@ -14,23 +14,4 @@ spec:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 1m
-  values:
-    controllerType: deployment
-    env:
-      TZ: "America/New_York"
-      PUID: "8675309"
-      PGID: "8675309"
-    ingress:
-      enabled: true
-      hosts:
-        - host: jackett.kube.com
-          paths:
-            - path: /
-              pathType: Prefix
-    persistence:
-      config:
-        enabled: true
-        storageClass: "local-path"
-        accessMode: ReadWriteOnce        
-        size: 1Gi
+      interval: 1m  

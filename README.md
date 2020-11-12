@@ -19,8 +19,8 @@ Check out my FluxV2 [README](./deployments/flux-system/README.md)
 A lot of inspiration for this repo came from the following people:
 
 K8s-at-home
-Discord(https://discord.gg/DNCynrJ)
-Github(https://github.com/k8s-at-home/charts)
+- [Discord](https://discord.gg/DNCynrJ)
+- [Github](https://github.com/k8s-at-home/charts)
 
 - [onedr0p/k3s-gitops](https://github.com/onedr0p/k3s-gitops)
 - [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)

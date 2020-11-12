@@ -19,24 +19,12 @@ Welcome to my home Kubernetes cluster. This repo _is_ my Kubernetes cluster in a
 
 ---
 
-## :wrench:&nbsp; Tools
-
-_Below are some of the tools I find useful for working with my cluster_
-
-| Tool                                                   | Purpose                                                                                                   |
-|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| [direnv](https://github.com/direnv/direnv)             | Set `KUBECONFIG` environment variable based on present working directory                                  |
-| [git-crypt](https://github.com/AGWA/git-crypt)         | Encrypt certain files in my repository that can only be decrypted with a key on my computers              |
-
-
----
-
 ## :handshake:&nbsp; Thanks
 
 A lot of inspiration for this repo came from the following people:
 
-- [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)
 - [onedr0p/k3s-gitops](https://github.com/onedr0p/k3s-gitops)
+- [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)
 - [bjw-s/k8s-gitops](https://github.com/bjw-s/k8s-gitops)
 - [nickysemenza/k3s](https://github.com/nickysemenza/k3s)
 - [carpenike/k8s-gitops](https://github.com/carpenike/k8s-gitops)

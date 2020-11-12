@@ -1,11 +1,4 @@
-<h1 align="center">
-  My home Kubernetes cluster :sailboat:
-  <br />
-  <br />
-  <img src="https://i.imgur.com/p1RzXjQ.png">
-</h1>
-<br />
-<div align="center">
+ My home Kubernetes cluster
 
 [![k3s](https://img.shields.io/badge/k3s-v1.18.8-orange?style=flat-square)](https://k3s.io/) [![GitHub stars](https://img.shields.io/github/stars/zenxedo/k3s-gitops?color=green&style=flat-square)](https://github.com/zenxedo/k3s-gitops/stargazers) [![GitHub issues](https://img.shields.io/github/issues/zenxedo/k3s-gitops?style=flat-square)](https://github.com/zenxedo/k3s-gitops/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/zenxedo/k3s-gitops?color=purple&style=flat-square)](https://github.com/zenxedo/k3s-gitops/commits/master) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/zenxedo/k3s-gitops/lint?color=blue&style=flat-square) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square)](https://github.com/pre-commit/pre-commit)
 
@@ -24,6 +17,10 @@ Check out my FluxV2 [README](./deployments/flux-system/README.md)
 ## :handshake:&nbsp; Thanks
 
 A lot of inspiration for this repo came from the following people:
+
+K8s-at-home
+Discord(https://discord.gg/DNCynrJ)
+Github(https://github.com/k8s-at-home/charts)
 
 - [onedr0p/k3s-gitops](https://github.com/onedr0p/k3s-gitops)
 - [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)

@@ -1,4 +1,4 @@
-### My home Kubernetes cluster
+# My home Kubernetes cluster
 
 [![k3s](https://img.shields.io/badge/k3s-v1.18.8-orange?style=flat-square)](https://k3s.io/) [![GitHub stars](https://img.shields.io/github/stars/zenxedo/k3s-gitops?color=green&style=flat-square)](https://github.com/zenxedo/k3s-gitops/stargazers) [![GitHub issues](https://img.shields.io/github/issues/zenxedo/k3s-gitops?style=flat-square)](https://github.com/zenxedo/k3s-gitops/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/zenxedo/k3s-gitops?color=purple&style=flat-square)](https://github.com/zenxedo/k3s-gitops/commits/master) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/zenxedo/k3s-gitops/lint?color=blue&style=flat-square) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square)](https://github.com/pre-commit/pre-commit)
 

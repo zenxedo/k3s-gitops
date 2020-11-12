@@ -7,4 +7,3 @@ metadata:
 spec:
   interval: 24h
   url: https://charts.helm.sh/stable
-  timeout: 3m

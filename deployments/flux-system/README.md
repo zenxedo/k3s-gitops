@@ -21,13 +21,11 @@ flux bootstrap github \
   --repository=k3s-gitops \
   --branch=master \
   --path=./deployments \
-  --personal
- ``` 
-```
- flux install \
   --components=source-controller,kustomize-controller,helm-controller,notification-controller \
-  --namespace=flux-system
-```
+  --personal \
+  --version=latest
+``` 
+
 ```
 flux reconcile ks flux-system --with-source
 ```

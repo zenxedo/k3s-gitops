@@ -17,3 +17,14 @@ spec:
       interval: 1m
   values:
     controllerType: deployment
+    env:
+      TZ: "America/New_York"
+      PUID: "8675309"
+      PGID: "8675309"
+    ingress:
+      enabled: true
+      hosts:
+        - host: jackett.kube.com
+          paths:
+            - path: /
+              pathType: Prefix

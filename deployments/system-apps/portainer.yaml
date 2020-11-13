@@ -25,4 +25,5 @@ spec:
               pathType: Prefix
     persistence:
       size: "5Gi"
-      storageClass: "local-path"  
+      storageClass: "local-path"
+      persistentVolumeReclaimPolicy: retain

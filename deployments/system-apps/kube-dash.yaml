@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: kubernetes-dashboard
+  name: kube-dashboard
   namespace: kube-system
 spec:
   interval: 5m
@@ -34,7 +34,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: system-kubernetes-dashboard
-  namespace: system
+  namespace: kube-system
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -42,4 +42,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: system-kubernetes-dashboard
-    namespace: system
+    namespace: kube-system

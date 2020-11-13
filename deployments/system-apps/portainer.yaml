@@ -23,3 +23,6 @@ spec:
           paths:
             - path: /
               pathType: Prefix
+    persistence:
+      size: "5Gi"
+      storageClass: "local-path"  

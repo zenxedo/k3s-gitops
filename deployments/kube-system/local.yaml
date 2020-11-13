@@ -16,6 +16,6 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    storageClass:
-      reclaimPolicy: Retain
+   # storageClass:
+   #   reclaimPolicy: Retain
     nodePathMap: [{node: DEFAULT_PATH_FOR_NON_LISTED_NODES, paths: ["/mnt"]}]

@@ -27,4 +27,4 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: local-storage 
+  name: local-path-storage 

@@ -26,5 +26,5 @@ spec:
     persistence:
       size: "5Gi"
       storageClass: "local-path"
-      persistentVolumeReclaimPolicy: retain
-      volumeName: portainer
+      #persistentVolumeReclaimPolicy: retain
+      #volumeName: portainer

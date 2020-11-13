@@ -14,7 +14,12 @@ spec:
         kind: HelmRepository
         name: naps
         namespace: flux-system
-      interval: 1m 
+      interval: 1m
+  values:   
+    nodePathMap:
+      - node: DEFAULT_PATH_FOR_NON_LISTED_NODES
+        paths:
+          - "/mnt"    
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

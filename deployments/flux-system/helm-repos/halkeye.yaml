@@ -5,6 +5,6 @@ metadata:
   name: halkeye
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 10m
   url: https://halkeye.github.io/helm-charts/
   timeout: 3m

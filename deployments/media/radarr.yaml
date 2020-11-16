@@ -31,7 +31,7 @@ spec:
     persistence:
       config:
         enabled: true
-        mountPath: "/config"
+        mountPath: /config
         storageClass: "local-path"
         accessMode: ReadWriteOnce
         path: /mnt
@@ -39,7 +39,4 @@ spec:
       media:
         enabled: true
         existingClaim: nfs-media-pvc
-        mountPath: "/mnt/media"
-    addons:
-      vpn:
-        enabled: false
+        mountPath: /mnt/media

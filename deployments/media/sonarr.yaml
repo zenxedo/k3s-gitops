@@ -38,4 +38,4 @@ spec:
       media:
         enabled: true
         existingClaim: nfs-media-pvc
-        mountPath: "/mnt/media"
+        mountPath: /mnt/media

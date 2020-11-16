@@ -28,3 +28,9 @@ spec:
           paths:
             - path: /
               pathType: Prefix
+    config:
+        enabled: true
+        mountPath: /config
+        existingClaim: jackett-pvc      
+        accessMode: ReadWriteOnce       
+        size: 1Gi

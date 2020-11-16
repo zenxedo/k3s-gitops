@@ -23,8 +23,8 @@ spec:
           paths:
             - path: /
               pathType: Prefix
-    persistence:
-      size: "5Gi"
-      storageClass: "local-path"
+    #persistence:
+    #  size: "5Gi"
+    #  storageClass: "local-path"
       #persistentVolumeReclaimPolicy: retain
       #volumeName: portainer

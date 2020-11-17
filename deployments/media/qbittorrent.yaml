@@ -9,12 +9,12 @@ spec:
   chart:
     spec:
       chart: qbittorrent
-      version: "6.4.0"
+      version: 6.4.0
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 1m
+      interval: 5m
   values:
     controllerType: deployment
     env:
@@ -24,10 +24,13 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: qb.kube.com
-          paths:
-            - path: /
-              pathType: Prefix
+      - host: qb.kube.com
+        paths:
+        - path: /
+          pathType: Prefix
+      tls:
+      - hosts:
+        - "qb.kube.com"
     persistence:
       config:
         enabled: true
@@ -35,3 +38,9 @@ spec:
         accessMode: ReadWriteOnce
         path: /mnt
         size: 1Gi
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits:
+        memory: 6000Mi    

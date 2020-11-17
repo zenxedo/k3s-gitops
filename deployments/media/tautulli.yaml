@@ -9,12 +9,12 @@ spec:
   chart:
     spec:
       chart: tautulli
-      version: "5.4.0"
+      version: 5.4.0
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 1m
+      interval: 5m
   values:
     controllerType: deployment
     env:

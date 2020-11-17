@@ -24,18 +24,20 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: sonarr.kube.com
-          paths:
-            - path: /
-              pathType: Prefix
+      - host: sonarr.kube.com
+        paths:
+        - path: /
+          pathType: Prefix
     persistence:
       config:
         enabled: true
         storageClass: "local-path"
-        accessMode: ReadWriteOnce
-        path: /mnt
-        size: 1Gi
-      media:
-        enabled: true
-        existingClaim: nfs-media-pvc
-        mountPath: /mnt/media
+        accessMode: ReadWriteOnce        
+        size: "1Gi"
+      additionalVolumeMounts:
+      - name: nfs-media-pv
+        mountPath: "/mnt/media"      
+      additionalVolumes:
+      - name: nfs-media-pv     
+      persistentVolumeClaim:
+        claimName: nfs-media-pvc

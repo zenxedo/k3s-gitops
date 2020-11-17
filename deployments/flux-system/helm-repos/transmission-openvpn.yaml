@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: transmission-openvpn
+  namespace: flux-system
+spec:
+  interval: 1h0m0s
+  url: https://utkuozdemir.org/helm-charts
+  timeout: 3m

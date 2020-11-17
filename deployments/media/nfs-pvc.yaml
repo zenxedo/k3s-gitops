@@ -11,7 +11,7 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Delete
+  persistentVolumeReclaimPolicy: Retain
   mountOptions:
     - hard
     - nfsvers=3

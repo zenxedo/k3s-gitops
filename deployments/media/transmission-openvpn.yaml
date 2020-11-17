@@ -32,10 +32,11 @@ spec:
       - hosts:
         - "transmission.kube.com"
     persistence:
-      config:
+      data:
         enabled: true
         storageClass: "local-path"
-        accessMode: ReadWriteOnce        
+        accessModes: 
+          -ReadWriteOnce        
         size: "1Gi"
       media:
         enabled: true

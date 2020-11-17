@@ -37,11 +37,7 @@ spec:
         storageClass: "local-path"
         accessModes: 
           -ReadWriteOnce        
-        size: "1Gi"
-      media:
-        enabled: true
-        existingClaim: nfs-media-pvc
-        mountPath: "/mnt/media"
+        size: "1Gi"      
     resources:
       requests:
         memory: 250Mi

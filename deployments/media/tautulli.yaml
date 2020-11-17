@@ -24,15 +24,22 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: tautulli.kube.com
-          paths:
-            - path: /
-              pathType: Prefix
+      - host: tautulli.kube.com
+        paths:
+        - path: /
+          pathType: Prefix
+      tls:
+      - hosts:
+        - "tautulli.kube.com"
     persistence:
       config:
         enabled: true
-        mountPath: "/config"
         storageClass: "local-path"
         accessMode: ReadWriteOnce
-        path: /mnt
-        size: 1Gi
+        size: "1Gi"
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits:
+        memory: 1500Mi

@@ -9,12 +9,12 @@ spec:
   chart:
     spec:
       chart: radarr
-      version: "7.4.0"
+      version: 7.4.0
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 1m
+      interval: 5m
   values:
     controllerType: deployment
     env:
@@ -24,19 +24,29 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: radarr.kube.com
-          paths:
-            - path: /
-              pathType: Prefix
+      - host: radarr.kube.com
+        paths:
+        - path: /
+          pathType: Prefix
+      tls:
+      - hosts:
+        - "radarr.kube.com"
     persistence:
       config:
         enabled: true
-        mountPath: /config
         storageClass: "local-path"
-        accessMode: ReadWriteOnce
-        path: /mnt
-        size: 1Gi
-      media:
-        enabled: true
-        existingClaim: nfs-media-pvc
-        mountPath: /mnt/media
+        accessMode: ReadWriteOnce        
+        size: "1Gi"
+      additionalVolumeMounts:
+      - name: nfs-media-pv
+        mountPath: "/mnt/media"      
+      additionalVolumes:
+      - name: nfs-media-pv     
+      persistentVolumeClaim:
+        claimName: nfs-media-pvc
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits:
+        memory: 1500Mi    

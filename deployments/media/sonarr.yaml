@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: sonarr
-      version: "7.4.0"
+      version: 7.4.0
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
@@ -28,6 +28,9 @@ spec:
         paths:
         - path: /
           pathType: Prefix
+      tls:
+      - hosts:
+        - "sonarr.kube.com"
     persistence:
       config:
         enabled: true
@@ -41,3 +44,9 @@ spec:
       - name: nfs-media-pv     
       persistentVolumeClaim:
         claimName: nfs-media-pvc
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits:
+        memory: 1500Mi    

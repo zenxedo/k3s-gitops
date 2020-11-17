@@ -15,31 +15,3 @@ spec:
         name: transmission-openvpn
         namespace: flux-system
       interval: 5m
-  values:    
-    env:
-      TZ: "America/New_York"
-      PUID: "8675309"
-      PGID: "8675309"
-    ingress:
-      enabled: true
-      hosts:
-      - host: transmission.kube.com
-        paths:
-        - path: /
-          pathType: Prefix
-      tls:
-      - hosts:
-        - "transmission.kube.com"
-    persistence:
-      data:
-        enabled: true
-        storageClass: "local-path"
-        accessModes: 
-          -ReadWriteOnce        
-        size: "1Gi"      
-    resources:
-      requests:
-        memory: 250Mi
-        cpu: 500m
-      limits:
-        memory: 6000Mi

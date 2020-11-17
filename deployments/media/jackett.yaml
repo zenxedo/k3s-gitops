@@ -9,12 +9,12 @@ spec:
   chart:
     spec:
       chart: jackett
-      version: "5.4.0"
+      version: 5.4.0
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 1m
+      interval: 5m
   values:
     controllerType: deployment
     env:
@@ -24,13 +24,22 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: jackett.kube.com
-          paths:
-            - path: /
-              pathType: Prefix
-    config:
-      enabled: true
-      mountPath: /config
-      existingClaim: jackett-pvc
-      accessMode: ReadWriteOnce
-      size: 1Gi
+      - host: jackett.kube.com
+        paths:
+        - path: /
+          pathType: Prefix
+      tls:
+      - hosts:
+        - "jackett.kube.com"    
+    persistence:
+      config:
+        enabled: true
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        size: "1Gi"
+    resources:
+      requests:
+        memory: 250Mi
+        cpu: 500m
+      limits:
+        memory: 1500Mi    

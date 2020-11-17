@@ -15,8 +15,7 @@ spec:
         name: transmission-openvpn
         namespace: flux-system
       interval: 5m
-  values:
-    controllerType: deployment
+  values:    
     env:
       TZ: "America/New_York"
       PUID: "8675309"

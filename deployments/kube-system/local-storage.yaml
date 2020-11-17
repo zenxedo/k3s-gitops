@@ -111,12 +111,14 @@ data:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: jackett-pvc
-  namespace: default
+  name: jackett-config
+  namespace: media
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-path
+  
   resources:
     requests:
-      storage: 1Gi 
+      storage: 1Gi
+
+  storageClassName: local-path    

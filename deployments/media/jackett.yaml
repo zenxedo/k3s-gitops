@@ -30,7 +30,7 @@ spec:
           pathType: Prefix
       tls:
       - hosts:
-        - "jackett.kube.com"    
+        - "jackett.kube.com"
     persistence:
       config:
         enabled: true

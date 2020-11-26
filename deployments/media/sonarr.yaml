@@ -35,15 +35,15 @@ spec:
       config:
         enabled: true
         storageClass: "local-path"
-        accessMode: ReadWriteOnce        
+        accessMode: ReadWriteOnce
         size: "1Gi"
       media:
         enabled: true
         existingClaim: nfs-media-pvc
-        mountPath: "/mnt/media"      
+        mountPath: "/mnt/media" 
     resources:
       requests:
         memory: 250Mi
         cpu: 500m
       limits:
-        memory: 1500Mi    
+        memory: 1500Mi

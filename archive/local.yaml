@@ -20,16 +20,3 @@ spec:
       - node: DEFAULT_PATH_FOR_NON_LISTED_NODES
         paths:
           - "/mnt"
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: jackett-pvc
-  namespace: default
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: local-path
-  resources:
-    requests:
-      storage: 1Gi    

@@ -17,7 +17,8 @@ spec:
       interval: 1m
   values:
     additionalArguments:     
-      - "--log.level=DEBUG"
+      - "--log.level=INFO"
+      - "--accesslog=false"
       - "--api.dashboard=true"
       - "--api.insecure=true"
       - "--serversTransport.insecureSkipVerify=true"  # for k8s dash

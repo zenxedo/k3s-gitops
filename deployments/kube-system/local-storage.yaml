@@ -121,4 +121,4 @@ spec:
     requests:
       storage: 1Gi
 
-  storageClassName: local-path    
+  storageClassName: local-path

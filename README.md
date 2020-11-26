@@ -19,8 +19,9 @@ Check out my FluxV2 [README](./deployments/flux-system/README.md)
 A lot of inspiration for this repo came from the following people:
 
 K8s-at-home
+- [awesome-home-kubenetes](https://github.com/k8s-at-home/awesome-home-kubernetes)
 - [Discord](https://discord.gg/2jE8jJgVMK)
-- [Github](https://github.com/k8s-at-home/charts)
+- [Charts](https://github.com/k8s-at-home/charts)
 
 ---
 

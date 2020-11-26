@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: plex
-      version: "2.0.x"
+      version: "2.1.x"
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home

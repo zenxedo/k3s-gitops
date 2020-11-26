@@ -34,7 +34,9 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: jackett-config
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        size: "1Gi"
     resources:
       requests:
         memory: 250Mi
